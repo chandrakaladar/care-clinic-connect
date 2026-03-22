@@ -41,7 +41,8 @@ const ContactPage = () => {
                 <h2 className="font-display font-bold text-xl text-foreground">Get in Touch</h2>
                 {[
                   { icon: Phone, label: "073308 33964", href: "tel:+917330833964" },
-                  { icon: Mail, label: "info@wecarephysio.in", href: "mailto:info@wecarephysio.in" },
+                  { icon: Phone, label: "070364 67752", href: "tel:+917036467752" },
+                  { icon: Mail, label: "chandrakaladar@gmail.com", href: "mailto:chandrakaladar@gmail.com" },
                   { icon: MapPin, label: "Door No: 13, 5-18, 4th Lane, near Kamaraju Diagnostic Centre, Gunturvari Thota, Kothapeta, Guntur, AP 522001" },
                   { icon: Clock, label: "Open daily · Closes 11 PM" },
                 ].map((item) => (
