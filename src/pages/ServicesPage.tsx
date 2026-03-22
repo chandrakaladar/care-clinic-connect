@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Bone, Activity, Brain, Heart, Zap } from "lucide-react";
+import { ArrowRight, Bone, Activity, Brain, Heart, Zap, Hand, Droplets, Flame, Baby, Footprints, CircleDot, Waves, BedDouble, Scissors } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
 
@@ -8,56 +8,119 @@ const services = [
   {
     icon: Bone,
     title: "Orthopedic Physiotherapy",
-    desc: "Expert treatment for joint pain, arthritis, frozen shoulder, back pain, neck pain, and all musculoskeletal conditions. Our therapists use manual therapy, therapeutic exercises, and modalities to restore mobility and reduce pain.",
+    desc: "Expert treatment for joint pain, arthritis, frozen shoulder, back pain, neck pain, and all musculoskeletal conditions using manual therapy, therapeutic exercises, and advanced modalities.",
     benefits: ["Joint mobilization & manipulation", "Posture correction", "Arthritis management", "Spine rehabilitation"],
   },
   {
     icon: Activity,
     title: "Sports Injury Rehabilitation",
-    desc: "Specialized programs for athletes and active individuals recovering from sprains, strains, ligament tears, and overuse injuries. We help you get back to peak performance safely.",
+    desc: "Specialized programs for athletes and active individuals recovering from sprains, strains, ligament tears, and overuse injuries. Get back to peak performance safely.",
     benefits: ["ACL & meniscus rehab", "Shoulder & rotator cuff recovery", "Return-to-sport programs", "Performance optimization"],
   },
   {
     icon: Brain,
     title: "Neurological Rehabilitation",
-    desc: "Comprehensive care for patients with stroke, paralysis, Parkinson's disease, and other neurological conditions. Our evidence-based neuro-rehab programs improve function and independence.",
-    benefits: ["Stroke rehabilitation", "Balance & coordination training", "Gait retraining", "Functional recovery programs"],
+    desc: "Comprehensive care for stroke, paralysis, Parkinson's disease, and other neurological conditions. Evidence-based neuro-rehab programs that improve function and independence.",
+    benefits: ["Stroke rehabilitation", "Paralysis treatment", "Balance & coordination training", "Gait retraining"],
   },
   {
     icon: Heart,
     title: "Post-Surgery Rehabilitation",
-    desc: "Structured recovery programs designed in coordination with your surgeon. Whether it's knee replacement, hip surgery, or spinal surgery, we guide you through every step of recovery.",
+    desc: "Structured recovery programs designed in coordination with your surgeon — from knee replacement and hip surgery to spinal procedures.",
     benefits: ["Joint replacement rehab", "Spinal surgery recovery", "Fracture rehabilitation", "Customized recovery timelines"],
   },
   {
     icon: Zap,
+    title: "Advanced Chiropractic & Osteopathy",
+    desc: "Precise spinal adjustments and osteopathic techniques to correct alignment, relieve nerve compression, and restore optimal body mechanics — following international rehab protocols.",
+    benefits: ["Spinal adjustments", "Nerve compression relief", "Postural realignment", "Osteopathic manipulation"],
+  },
+  {
+    icon: Scissors,
+    title: "Dry Needling & Acupuncture",
+    desc: "Targeted dry needling and acupuncture therapy to release trigger points, reduce muscle tension, and accelerate pain relief for chronic and acute conditions.",
+    benefits: ["Trigger point release", "Chronic pain relief", "Muscle tension reduction", "Accelerated healing"],
+  },
+  {
+    icon: Hand,
+    title: "Myofascial Release & Massage Therapy",
+    desc: "Specialized soft tissue techniques including myofascial release and therapeutic massage to break adhesions, improve tissue mobility, and reduce pain.",
+    benefits: ["Fascia mobilization", "Deep tissue massage", "Scar tissue management", "Improved range of motion"],
+  },
+  {
+    icon: Flame,
+    title: "Cupping & Heat Therapy",
+    desc: "Traditional cupping therapy combined with heat modalities to improve blood flow, reduce inflammation, and promote deep tissue healing.",
+    benefits: ["Improved circulation", "Inflammation reduction", "Deep tissue healing", "Muscle relaxation"],
+  },
+  {
+    icon: Zap,
     title: "Pain Management",
-    desc: "Advanced pain relief physiotherapy for chronic and acute conditions including sciatica, cervical spondylosis, fibromyalgia, and headaches. Drug-free approaches that address the root cause of pain.",
-    benefits: ["Chronic back pain relief", "Sciatica treatment", "Migraine & tension headache relief", "Electrotherapy & dry needling"],
+    desc: "Drug-free approaches for chronic and acute pain including sciatica, cervical spondylosis, fibromyalgia, back pain, knee pain, hip pain, and foot & ankle pain.",
+    benefits: ["Back & neck pain relief", "Sciatica treatment", "Knee & hip pain management", "Foot & ankle rehabilitation"],
+  },
+  {
+    icon: Waves,
+    title: "Hydrotherapy & Aquatic Physiotherapy",
+    desc: "Water-based rehabilitation programs that use buoyancy and resistance to improve mobility, strength, and recovery with minimal joint stress.",
+    benefits: ["Low-impact rehabilitation", "Improved mobility", "Post-surgical aquatic rehab", "Arthritis management"],
+  },
+  {
+    icon: CircleDot,
+    title: "Balance Exercise Therapy",
+    desc: "Targeted balance and proprioception training to prevent falls, improve stability, and restore confidence in movement — especially for elderly patients.",
+    benefits: ["Fall prevention", "Vestibular rehabilitation", "Proprioception training", "Stability improvement"],
+  },
+  {
+    icon: Baby,
+    title: "Paediatric Physiotherapy",
+    desc: "Gentle, age-appropriate physiotherapy for children with developmental delays, cerebral palsy, sports injuries, and postural concerns.",
+    benefits: ["Developmental delay support", "Cerebral palsy rehab", "Postural correction", "Motor skill development"],
+  },
+  {
+    icon: Footprints,
+    title: "Geriatric Physiotherapy",
+    desc: "Specialized elderly care focusing on mobility preservation, fall prevention, joint health, and maintaining independence through safe, guided exercise programs.",
+    benefits: ["Mobility preservation", "Joint health maintenance", "Strength building", "Independence support"],
+  },
+  {
+    icon: BedDouble,
+    title: "Inpatient Rehabilitation",
+    desc: "Comprehensive inpatient rehab programs for patients requiring intensive, supervised recovery — including paralysis treatment, post-surgical care, and critical illness recovery.",
+    benefits: ["24/7 supervised care", "Intensive rehab programs", "Critical illness recovery", "Paralysis rehabilitation"],
+  },
+  {
+    icon: Activity,
+    title: "Occupational Therapy",
+    desc: "Helping patients regain the ability to perform daily activities after injury, surgery, or neurological events — restoring independence and quality of life.",
+    benefits: ["Daily activity training", "Adaptive techniques", "Workplace ergonomics", "Cognitive rehabilitation"],
   },
 ];
 
 const ServicesPage = () => (
   <>
     <SEOHead
-      title="Physiotherapy Services in Guntur | Pain Relief, Sports Rehab, Neuro Rehab"
-      description="Explore our physiotherapy services in Guntur: orthopedic physiotherapy, sports injury rehab, neurological rehabilitation, post-surgery recovery, and pain management."
+      title="Physiotherapy Services in Guntur | Chiropractic, Dry Needling, Sports Rehab"
+      description="Explore our 15+ physiotherapy services in Guntur: chiropractic care, dry needling, myofascial release, cupping therapy, paralysis treatment, sports rehab, and more. International rehab protocols."
     />
     <section className="bg-surface-warm py-16 md:py-24">
       <div className="container">
         <ScrollReveal className="text-center mb-16 max-w-3xl mx-auto">
           <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-3">Our Services</p>
           <h1 className="font-display font-extrabold text-4xl md:text-5xl text-foreground leading-tight mb-4">
-            Expert Physiotherapy Services in Guntur
+            Expert Physiotherapy & Rehabilitation in Guntur
           </h1>
-          <p className="text-muted-foreground text-lg">
-            From pain relief to full recovery — our team of specialists delivers personalized treatment plans using the latest evidence-based techniques.
+          <p className="text-muted-foreground text-lg mb-3">
+            Advanced Chiropractic & Osteopathy, Dry Needling, Myofascial Release, Cupping Therapy, Paralysis Treatment — all under one roof.
+          </p>
+          <p className="inline-block bg-primary/10 text-primary font-semibold text-sm px-4 py-2 rounded-full">
+            We Follow International Rehab Protocols
           </p>
         </ScrollReveal>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           {services.map((svc, i) => (
-            <ScrollReveal key={svc.title} delay={i * 0.06}>
+            <ScrollReveal key={svc.title} delay={i * 0.04}>
               <div className="bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 grid md:grid-cols-[1fr_auto] gap-8 items-start">
                 <div>
                   <div className="w-12 h-12 rounded-lg bg-teal-soft flex items-center justify-center mb-4">

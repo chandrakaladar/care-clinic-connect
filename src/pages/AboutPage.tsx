@@ -27,8 +27,11 @@ const AboutPage = () => (
           <h1 className="font-display font-extrabold text-4xl md:text-5xl text-foreground leading-tight mb-6">
             Healing Guntur, One Patient at a Time
           </h1>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-            We Care Physiotherapy & Sports & Chiropractic Clinic was founded with a single mission — to provide world-class physiotherapy and rehabilitation services right here in Guntur, Andhra Pradesh. Over the past 12 years, we have helped more than 8,500 patients recover from pain, injuries, and surgeries with evidence-based care and genuine compassion.
+          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+            We Care Physiotherapy & Sports & Chiropractic Clinic is a leading rehabilitation centre in Guntur, Andhra Pradesh, specializing in Advanced Chiropractic & Osteopathy, Dry Needling, Myofascial Release, Cupping Therapy, and Paralysis Treatment. Over the past 12 years, we have helped more than 8,500 patients recover from pain, injuries, and surgeries.
+          </p>
+          <p className="inline-block bg-primary/10 text-primary font-semibold text-sm px-4 py-2 rounded-full mb-8">
+            We Follow International Rehab Protocols
           </p>
         </ScrollReveal>
 

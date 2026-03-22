@@ -20,7 +20,7 @@ const ContactPage = () => {
     <>
       <SEOHead
         title="Contact Us | Book Appointment | We Care Physiotherapy Guntur"
-        description="Book an appointment at We Care Physiotherapy Clinic in Guntur. Call, WhatsApp, or fill out our form. Located in Guntur, Andhra Pradesh. Open Mon-Sat 8AM-8PM."
+        description="Book an appointment at We Care Physiotherapy Clinic in Kothapeta, Guntur. Call 073308 33964, WhatsApp, or fill out our form. Open daily till 11 PM."
       />
       <section className="bg-surface-warm py-16 md:py-24">
         <div className="container">
@@ -40,10 +40,10 @@ const ContactPage = () => {
               <div className="bg-card rounded-2xl p-7 shadow-sm border border-border/50 space-y-6">
                 <h2 className="font-display font-bold text-xl text-foreground">Get in Touch</h2>
                 {[
-                  { icon: Phone, label: "+91 98765 43210", href: "tel:+919876543210" },
+                  { icon: Phone, label: "073308 33964", href: "tel:+917330833964" },
                   { icon: Mail, label: "info@wecarephysio.in", href: "mailto:info@wecarephysio.in" },
-                  { icon: MapPin, label: "Guntur, Andhra Pradesh, India" },
-                  { icon: Clock, label: "Mon–Sat: 8:00 AM – 8:00 PM" },
+                  { icon: MapPin, label: "Door No: 13, 5-18, 4th Lane, near Kamaraju Diagnostic Centre, Gunturvari Thota, Kothapeta, Guntur, AP 522001" },
+                  { icon: Clock, label: "Open daily · Closes 11 PM" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-lg bg-teal-soft flex items-center justify-center shrink-0">
@@ -66,7 +66,7 @@ const ContactPage = () => {
               <div className="rounded-2xl overflow-hidden shadow-sm border border-border/50 h-64">
                 <iframe
                   title="We Care Physiotherapy Clinic Guntur Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122440.16825988611!2d80.37789!3d16.3067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a754b37e46a73%3A0x648d07a4c0f43e7!2sGuntur%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.9!2d80.4365!3d16.3067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a754b37e46a73%3A0x648d07a4c0f43e7!2sKothapeta%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1700000000000"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -112,11 +112,16 @@ const ContactPage = () => {
                       >
                         <option value="">Select your concern</option>
                         <option>Back Pain / Neck Pain</option>
+                        <option>Knee / Hip / Joint Pain</option>
                         <option>Sports Injury</option>
                         <option>Post-Surgery Rehabilitation</option>
-                        <option>Knee / Joint Pain</option>
-                        <option>Neurological Condition</option>
-                        <option>Chiropractic Care</option>
+                        <option>Chiropractic / Osteopathy</option>
+                        <option>Paralysis / Neurological Condition</option>
+                        <option>Dry Needling / Acupuncture</option>
+                        <option>Cupping / Myofascial Therapy</option>
+                        <option>Foot & Ankle Pain</option>
+                        <option>Paediatric Physiotherapy</option>
+                        <option>Geriatric / Elderly Care</option>
                         <option>Other</option>
                       </select>
                     </div>
@@ -143,8 +148,8 @@ const ContactPage = () => {
         {[
           { q: "Do I need a doctor's referral for physiotherapy?", a: "No, you can directly visit We Care Physiotherapy Clinic in Guntur without a referral. However, if you're recovering from surgery, bringing your medical reports helps us create a better treatment plan." },
           { q: "How many sessions will I need?", a: "The number of sessions depends on your condition, severity, and goals. Typically, patients see improvement within 4–8 sessions. Our physiotherapist will discuss a personalized treatment plan during your first visit." },
-          { q: "Is physiotherapy painful?", a: "Physiotherapy should not be painful. You may feel mild discomfort during certain exercises or manual therapy, but our therapists always work within your comfort level. The goal is to reduce pain, not increase it." },
-          { q: "What should I wear to my appointment?", a: "Wear comfortable, loose-fitting clothing that allows easy movement. For lower body issues, shorts or track pants work well. For upper body, a comfortable t-shirt is ideal." },
+          { q: "What services do you specialize in?", a: "We specialize in Advanced Chiropractic & Osteopathy, Dry Needling, Myofascial Release, Cupping Therapy, Paralysis Treatment, Sports Rehab, and many more — all following international rehabilitation protocols." },
+          { q: "What are your clinic hours?", a: "We are open daily and close at 11 PM. Walk-ins are welcome, but we recommend booking an appointment to avoid waiting. Call us at 073308 33964." },
           { q: "Do you accept health insurance?", a: "Yes, we work with most major health insurance providers. Please contact us with your insurance details and we'll help you understand your coverage for physiotherapy treatment." },
         ].map((faq, i) => (
           <ScrollReveal key={i} delay={i * 0.05}>
