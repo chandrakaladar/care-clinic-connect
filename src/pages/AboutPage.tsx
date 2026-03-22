@@ -5,12 +5,13 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
 
 const values = [
-  "Patient-centered care with personalized treatment plans",
-  "Evidence-based physiotherapy and rehabilitation",
-  "State-of-the-art equipment and modern techniques",
-  "Compassionate team with 12+ years of experience",
-  "Affordable and accessible healthcare for all",
-  "Comprehensive approach — body, movement, and wellness",
+  "International rehabilitation protocols for every treatment",
+  "Advanced Chiropractic & Osteopathy, Dry Needling, and Cupping Therapy",
+  "Myofascial Release and specialized soft tissue techniques",
+  "Paralysis Treatment and comprehensive neurological rehabilitation",
+  "Compassionate team with 12+ years of clinical experience",
+  "Open daily until 11 PM for your convenience",
+  "Affordable and accessible healthcare for all ages",
 ];
 
 const AboutPage = () => (
