@@ -42,9 +42,9 @@ const Navbar = () => {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href="tel:+919876543210" className="hidden md:flex">
+          <a href="tel:+917330833964" className="hidden md:flex">
             <Button variant="outline" size="sm" className="gap-2 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground">
-              <Phone className="w-4 h-4" /> Call Now
+              <Phone className="w-4 h-4" /> 073308 33964
             </Button>
           </a>
           <Link to="/contact" className="hidden md:block">
@@ -79,9 +79,9 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <a href="tel:+919876543210" className="mt-2">
+            <a href="tel:+917330833964" className="mt-2">
               <Button variant="outline" className="w-full gap-2 border-primary/30 text-primary">
-                <Phone className="w-4 h-4" /> Call Now
+                <Phone className="w-4 h-4" /> 073308 33964
               </Button>
             </a>
             <Link to="/contact" onClick={() => setOpen(false)} className="mt-1">

@@ -6,8 +6,11 @@ const Footer = () => (
     <div className="container py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
       <div>
         <h3 className="font-display font-bold text-xl mb-4">We Care Physiotherapy</h3>
-        <p className="text-secondary-foreground/70 text-sm leading-relaxed">
-          Your trusted partner for physiotherapy, sports rehabilitation, and chiropractic care in Guntur, Andhra Pradesh.
+        <p className="text-secondary-foreground/70 text-sm leading-relaxed mb-3">
+          Advanced Chiropractic & Osteopathy, Dry Needling, Myofascial Release, Cupping Therapy, Paralysis Treatment & Rehabilitation Centre in Guntur.
+        </p>
+        <p className="inline-block bg-secondary-foreground/10 text-secondary-foreground/80 text-xs font-semibold px-3 py-1 rounded-full">
+          International Rehab Protocols
         </p>
       </div>
       <div>
@@ -29,27 +32,28 @@ const Footer = () => (
       <div>
         <h4 className="font-display font-semibold text-lg mb-4">Services</h4>
         <nav className="flex flex-col gap-2 text-sm text-secondary-foreground/70">
-          <Link to="/services" className="hover:text-secondary-foreground transition-colors">Orthopedic Physiotherapy</Link>
+          <Link to="/services" className="hover:text-secondary-foreground transition-colors">Chiropractic & Osteopathy</Link>
+          <Link to="/services" className="hover:text-secondary-foreground transition-colors">Dry Needling & Acupuncture</Link>
+          <Link to="/services" className="hover:text-secondary-foreground transition-colors">Myofascial Release</Link>
+          <Link to="/services" className="hover:text-secondary-foreground transition-colors">Paralysis Treatment</Link>
           <Link to="/services" className="hover:text-secondary-foreground transition-colors">Sports Injury Rehab</Link>
-          <Link to="/services" className="hover:text-secondary-foreground transition-colors">Neurological Rehab</Link>
-          <Link to="/services" className="hover:text-secondary-foreground transition-colors">Post-Surgery Rehab</Link>
-          <Link to="/services" className="hover:text-secondary-foreground transition-colors">Pain Management</Link>
+          <Link to="/services" className="hover:text-secondary-foreground transition-colors">Cupping & Heat Therapy</Link>
         </nav>
       </div>
       <div>
         <h4 className="font-display font-semibold text-lg mb-4">Contact Info</h4>
         <div className="flex flex-col gap-3 text-sm text-secondary-foreground/70">
-          <a href="tel:+919876543210" className="flex items-start gap-2 hover:text-secondary-foreground transition-colors">
-            <Phone className="w-4 h-4 mt-0.5 shrink-0" /> +91 98765 43210
+          <a href="tel:+917330833964" className="flex items-start gap-2 hover:text-secondary-foreground transition-colors">
+            <Phone className="w-4 h-4 mt-0.5 shrink-0" /> 073308 33964
           </a>
           <a href="mailto:info@wecarephysio.in" className="flex items-start gap-2 hover:text-secondary-foreground transition-colors">
             <Mail className="w-4 h-4 mt-0.5 shrink-0" /> info@wecarephysio.in
           </a>
           <div className="flex items-start gap-2">
-            <MapPin className="w-4 h-4 mt-0.5 shrink-0" /> Guntur, Andhra Pradesh, India
+            <MapPin className="w-4 h-4 mt-0.5 shrink-0" /> Door No: 13, 5-18, 4th Lane, Kothapeta, Guntur, AP 522001
           </div>
           <div className="flex items-start gap-2">
-            <Clock className="w-4 h-4 mt-0.5 shrink-0" /> Mon–Sat: 8:00 AM – 8:00 PM
+            <Clock className="w-4 h-4 mt-0.5 shrink-0" /> Open daily · Closes 11 PM
           </div>
         </div>
       </div>
