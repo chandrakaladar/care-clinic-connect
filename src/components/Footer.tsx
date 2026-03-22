@@ -46,8 +46,11 @@ const Footer = () => (
           <a href="tel:+917330833964" className="flex items-start gap-2 hover:text-secondary-foreground transition-colors">
             <Phone className="w-4 h-4 mt-0.5 shrink-0" /> 073308 33964
           </a>
-          <a href="mailto:info@wecarephysio.in" className="flex items-start gap-2 hover:text-secondary-foreground transition-colors">
-            <Mail className="w-4 h-4 mt-0.5 shrink-0" /> info@wecarephysio.in
+          <a href="tel:+917036467752" className="flex items-start gap-2 hover:text-secondary-foreground transition-colors">
+            <Phone className="w-4 h-4 mt-0.5 shrink-0" /> 070364 67752
+          </a>
+          <a href="mailto:chandrakaladar@gmail.com" className="flex items-start gap-2 hover:text-secondary-foreground transition-colors">
+            <Mail className="w-4 h-4 mt-0.5 shrink-0" /> chandrakaladar@gmail.com
           </a>
           <div className="flex items-start gap-2">
             <MapPin className="w-4 h-4 mt-0.5 shrink-0" /> Door No: 13, 5-18, 4th Lane, Kothapeta, Guntur, AP 522001

@@ -152,6 +152,11 @@ const HomePage = () => (
               Call: 073308 33964
             </Button>
           </a>
+          <a href="tel:+917036467752">
+            <Button size="lg" variant="outline" className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground/10 active:scale-[0.97] transition-transform">
+              Call: 070364 67752
+            </Button>
+          </a>
         </div>
       </ScrollReveal>
     </section>
