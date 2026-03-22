@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,10 +15,23 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 bg-card/90 backdrop-blur-md border-b">
+    <header
+      className={`sticky top-0 z-50 border-b transition-all duration-300 ${
+        scrolled
+          ? "bg-card/95 backdrop-blur-lg shadow-sm"
+          : "bg-card/80 backdrop-blur-md"
+      }`}
+    >
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="font-display font-bold text-lg md:text-xl text-primary leading-tight">
           We Care<br className="hidden md:block" />
@@ -30,7 +43,7 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                 location.pathname === link.path
                   ? "text-primary bg-teal-soft"
                   : "text-foreground/70 hover:text-primary hover:bg-teal-soft"
@@ -43,12 +56,12 @@ const Navbar = () => {
 
         <div className="flex items-center gap-3">
           <a href="tel:+917330833964" className="hidden md:flex">
-            <Button variant="outline" size="sm" className="gap-2 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground">
+            <Button variant="outline" size="sm" className="gap-2 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200">
               <Phone className="w-4 h-4" /> 073308 33964
             </Button>
           </a>
           <Link to="/contact" className="hidden md:block">
-            <Button size="sm" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+            <Button size="sm" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-md shadow-secondary/20 hover:shadow-lg hover:shadow-secondary/30 transition-all duration-200">
               Book Appointment
             </Button>
           </Link>
@@ -62,8 +75,13 @@ const Navbar = () => {
         </div>
       </div>
 
-      {open && (
-        <div className="lg:hidden bg-card border-t">
+      {/* Mobile menu with animation */}
+      <div
+        className={`lg:hidden overflow-hidden transition-all duration-300 ease-out ${
+          open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="bg-card border-t">
           <nav className="container flex flex-col py-4 gap-1">
             {navLinks.map((link) => (
               <Link
@@ -91,7 +109,7 @@ const Navbar = () => {
             </Link>
           </nav>
         </div>
-      )}
+      </div>
     </header>
   );
 };

@@ -5,42 +5,12 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
 
 const testimonials = [
-  {
-    name: "Srinivas Rao",
-    condition: "Chronic Back Pain",
-    text: "After suffering from severe lower back pain for 3 years, I finally found relief at We Care. Dr. Ramesh's treatment plan was thorough and I started feeling better within the first week. Now I can play with my grandchildren again!",
-    rating: 5,
-  },
-  {
-    name: "Lakshmi Devi",
-    condition: "Post Knee Replacement",
-    text: "The post-surgery rehabilitation at We Care was exceptional. The team was patient, encouraging, and highly skilled. I regained full mobility in my knee within 3 months. Highly recommend this clinic to anyone in Guntur.",
-    rating: 5,
-  },
-  {
-    name: "Ravi Teja",
-    condition: "Sports Injury — ACL Tear",
-    text: "As a cricket player, my ACL injury felt like the end of my career. But Dr. Anil and the team at We Care gave me a comprehensive rehab program. I'm back on the field, stronger than before.",
-    rating: 5,
-  },
-  {
-    name: "Padmavathi",
-    condition: "Stroke Rehabilitation",
-    text: "Dr. Priya's neurological rehabilitation program helped my father regain movement after a stroke. Her expertise and compassion made a difficult time much easier for our entire family.",
-    rating: 5,
-  },
-  {
-    name: "Venkat Reddy",
-    condition: "Frozen Shoulder",
-    text: "I couldn't lift my arm for months. The physiotherapy sessions at We Care gradually restored my range of motion. The clinic is clean, modern, and the staff treats you like family.",
-    rating: 5,
-  },
-  {
-    name: "Anitha Kumari",
-    condition: "Sciatica Pain",
-    text: "The shooting pain down my leg made everyday life unbearable. We Care's pain management approach was drug-free and effective. Within 6 weeks I was pain-free. Best physiotherapy clinic in Guntur!",
-    rating: 5,
-  },
+  { name: "Srinivas Rao", condition: "Chronic Back Pain", text: "After suffering from severe lower back pain for 3 years, I finally found relief at We Care. Dr. Ramesh's treatment plan was thorough and I started feeling better within the first week. Now I can play with my grandchildren again!", rating: 5 },
+  { name: "Lakshmi Devi", condition: "Post Knee Replacement", text: "The post-surgery rehabilitation at We Care was exceptional. The team was patient, encouraging, and highly skilled. I regained full mobility in my knee within 3 months. Highly recommend this clinic to anyone in Guntur.", rating: 5 },
+  { name: "Ravi Teja", condition: "Sports Injury — ACL Tear", text: "As a cricket player, my ACL injury felt like the end of my career. But Dr. Anil and the team at We Care gave me a comprehensive rehab program. I'm back on the field, stronger than before.", rating: 5 },
+  { name: "Padmavathi", condition: "Stroke Rehabilitation", text: "Dr. Priya's neurological rehabilitation program helped my father regain movement after a stroke. Her expertise and compassion made a difficult time much easier for our entire family.", rating: 5 },
+  { name: "Venkat Reddy", condition: "Frozen Shoulder", text: "I couldn't lift my arm for months. The physiotherapy sessions at We Care gradually restored my range of motion. The clinic is clean, modern, and the staff treats you like family.", rating: 5 },
+  { name: "Anitha Kumari", condition: "Sciatica Pain", text: "The shooting pain down my leg made everyday life unbearable. We Care's pain management approach was drug-free and effective. Within 6 weeks I was pain-free. Best physiotherapy clinic in Guntur!", rating: 5 },
 ];
 
 const TestimonialsPage = () => (
@@ -64,7 +34,8 @@ const TestimonialsPage = () => (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {testimonials.map((t, i) => (
             <ScrollReveal key={t.name} delay={i * 0.06}>
-              <div className="bg-card rounded-2xl p-7 shadow-sm border border-border/50 h-full flex flex-col">
+              <div className="bg-card rounded-2xl p-7 shadow-sm border border-border/50 h-full flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative group">
+                <span className="absolute top-4 right-5 text-6xl font-serif text-primary/8 leading-none select-none group-hover:text-primary/15 transition-colors duration-300">"</span>
                 <div className="flex gap-0.5 mb-4">
                   {Array.from({ length: t.rating }).map((_, j) => (
                     <Star key={j} className="w-4 h-4 fill-primary text-primary" />
@@ -82,7 +53,7 @@ const TestimonialsPage = () => (
 
         <ScrollReveal delay={0.2} className="text-center mt-16">
           <Link to="/contact">
-            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground gap-2 active:scale-[0.97] transition-transform">
+            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground gap-2 active:scale-[0.97] transition-all duration-200 shadow-lg shadow-secondary/20">
               Book Your Appointment <ArrowRight className="w-4 h-4" />
             </Button>
           </Link>

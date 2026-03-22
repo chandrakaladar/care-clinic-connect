@@ -5,96 +5,21 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
 
 const services = [
-  {
-    icon: Bone,
-    title: "Orthopedic Physiotherapy",
-    desc: "Expert treatment for joint pain, arthritis, frozen shoulder, back pain, neck pain, and all musculoskeletal conditions using manual therapy, therapeutic exercises, and advanced modalities.",
-    benefits: ["Joint mobilization & manipulation", "Posture correction", "Arthritis management", "Spine rehabilitation"],
-  },
-  {
-    icon: Activity,
-    title: "Sports Injury Rehabilitation",
-    desc: "Specialized programs for athletes and active individuals recovering from sprains, strains, ligament tears, and overuse injuries. Get back to peak performance safely.",
-    benefits: ["ACL & meniscus rehab", "Shoulder & rotator cuff recovery", "Return-to-sport programs", "Performance optimization"],
-  },
-  {
-    icon: Brain,
-    title: "Neurological Rehabilitation",
-    desc: "Comprehensive care for stroke, paralysis, Parkinson's disease, and other neurological conditions. Evidence-based neuro-rehab programs that improve function and independence.",
-    benefits: ["Stroke rehabilitation", "Paralysis treatment", "Balance & coordination training", "Gait retraining"],
-  },
-  {
-    icon: Heart,
-    title: "Post-Surgery Rehabilitation",
-    desc: "Structured recovery programs designed in coordination with your surgeon — from knee replacement and hip surgery to spinal procedures.",
-    benefits: ["Joint replacement rehab", "Spinal surgery recovery", "Fracture rehabilitation", "Customized recovery timelines"],
-  },
-  {
-    icon: Zap,
-    title: "Advanced Chiropractic & Osteopathy",
-    desc: "Precise spinal adjustments and osteopathic techniques to correct alignment, relieve nerve compression, and restore optimal body mechanics — following international rehab protocols.",
-    benefits: ["Spinal adjustments", "Nerve compression relief", "Postural realignment", "Osteopathic manipulation"],
-  },
-  {
-    icon: Scissors,
-    title: "Dry Needling & Acupuncture",
-    desc: "Targeted dry needling and acupuncture therapy to release trigger points, reduce muscle tension, and accelerate pain relief for chronic and acute conditions.",
-    benefits: ["Trigger point release", "Chronic pain relief", "Muscle tension reduction", "Accelerated healing"],
-  },
-  {
-    icon: Hand,
-    title: "Myofascial Release & Massage Therapy",
-    desc: "Specialized soft tissue techniques including myofascial release and therapeutic massage to break adhesions, improve tissue mobility, and reduce pain.",
-    benefits: ["Fascia mobilization", "Deep tissue massage", "Scar tissue management", "Improved range of motion"],
-  },
-  {
-    icon: Flame,
-    title: "Cupping & Heat Therapy",
-    desc: "Traditional cupping therapy combined with heat modalities to improve blood flow, reduce inflammation, and promote deep tissue healing.",
-    benefits: ["Improved circulation", "Inflammation reduction", "Deep tissue healing", "Muscle relaxation"],
-  },
-  {
-    icon: Zap,
-    title: "Pain Management",
-    desc: "Drug-free approaches for chronic and acute pain including sciatica, cervical spondylosis, fibromyalgia, back pain, knee pain, hip pain, and foot & ankle pain.",
-    benefits: ["Back & neck pain relief", "Sciatica treatment", "Knee & hip pain management", "Foot & ankle rehabilitation"],
-  },
-  {
-    icon: Waves,
-    title: "Hydrotherapy & Aquatic Physiotherapy",
-    desc: "Water-based rehabilitation programs that use buoyancy and resistance to improve mobility, strength, and recovery with minimal joint stress.",
-    benefits: ["Low-impact rehabilitation", "Improved mobility", "Post-surgical aquatic rehab", "Arthritis management"],
-  },
-  {
-    icon: CircleDot,
-    title: "Balance Exercise Therapy",
-    desc: "Targeted balance and proprioception training to prevent falls, improve stability, and restore confidence in movement — especially for elderly patients.",
-    benefits: ["Fall prevention", "Vestibular rehabilitation", "Proprioception training", "Stability improvement"],
-  },
-  {
-    icon: Baby,
-    title: "Paediatric Physiotherapy",
-    desc: "Gentle, age-appropriate physiotherapy for children with developmental delays, cerebral palsy, sports injuries, and postural concerns.",
-    benefits: ["Developmental delay support", "Cerebral palsy rehab", "Postural correction", "Motor skill development"],
-  },
-  {
-    icon: Footprints,
-    title: "Geriatric Physiotherapy",
-    desc: "Specialized elderly care focusing on mobility preservation, fall prevention, joint health, and maintaining independence through safe, guided exercise programs.",
-    benefits: ["Mobility preservation", "Joint health maintenance", "Strength building", "Independence support"],
-  },
-  {
-    icon: BedDouble,
-    title: "Inpatient Rehabilitation",
-    desc: "Comprehensive inpatient rehab programs for patients requiring intensive, supervised recovery — including paralysis treatment, post-surgical care, and critical illness recovery.",
-    benefits: ["24/7 supervised care", "Intensive rehab programs", "Critical illness recovery", "Paralysis rehabilitation"],
-  },
-  {
-    icon: Activity,
-    title: "Occupational Therapy",
-    desc: "Helping patients regain the ability to perform daily activities after injury, surgery, or neurological events — restoring independence and quality of life.",
-    benefits: ["Daily activity training", "Adaptive techniques", "Workplace ergonomics", "Cognitive rehabilitation"],
-  },
+  { icon: Bone, title: "Orthopedic Physiotherapy", desc: "Expert treatment for joint pain, arthritis, frozen shoulder, back pain, neck pain, and all musculoskeletal conditions using manual therapy, therapeutic exercises, and advanced modalities.", benefits: ["Joint mobilization & manipulation", "Posture correction", "Arthritis management", "Spine rehabilitation"] },
+  { icon: Activity, title: "Sports Injury Rehabilitation", desc: "Specialized programs for athletes and active individuals recovering from sprains, strains, ligament tears, and overuse injuries. Get back to peak performance safely.", benefits: ["ACL & meniscus rehab", "Shoulder & rotator cuff recovery", "Return-to-sport programs", "Performance optimization"] },
+  { icon: Brain, title: "Neurological Rehabilitation", desc: "Comprehensive care for stroke, paralysis, Parkinson's disease, and other neurological conditions. Evidence-based neuro-rehab programs that improve function and independence.", benefits: ["Stroke rehabilitation", "Paralysis treatment", "Balance & coordination training", "Gait retraining"] },
+  { icon: Heart, title: "Post-Surgery Rehabilitation", desc: "Structured recovery programs designed in coordination with your surgeon — from knee replacement and hip surgery to spinal procedures.", benefits: ["Joint replacement rehab", "Spinal surgery recovery", "Fracture rehabilitation", "Customized recovery timelines"] },
+  { icon: Zap, title: "Advanced Chiropractic & Osteopathy", desc: "Precise spinal adjustments and osteopathic techniques to correct alignment, relieve nerve compression, and restore optimal body mechanics — following international rehab protocols.", benefits: ["Spinal adjustments", "Nerve compression relief", "Postural realignment", "Osteopathic manipulation"] },
+  { icon: Scissors, title: "Dry Needling & Acupuncture", desc: "Targeted dry needling and acupuncture therapy to release trigger points, reduce muscle tension, and accelerate pain relief for chronic and acute conditions.", benefits: ["Trigger point release", "Chronic pain relief", "Muscle tension reduction", "Accelerated healing"] },
+  { icon: Hand, title: "Myofascial Release & Massage Therapy", desc: "Specialized soft tissue techniques including myofascial release and therapeutic massage to break adhesions, improve tissue mobility, and reduce pain.", benefits: ["Fascia mobilization", "Deep tissue massage", "Scar tissue management", "Improved range of motion"] },
+  { icon: Flame, title: "Cupping & Heat Therapy", desc: "Traditional cupping therapy combined with heat modalities to improve blood flow, reduce inflammation, and promote deep tissue healing.", benefits: ["Improved circulation", "Inflammation reduction", "Deep tissue healing", "Muscle relaxation"] },
+  { icon: Zap, title: "Pain Management", desc: "Drug-free approaches for chronic and acute pain including sciatica, cervical spondylosis, fibromyalgia, back pain, knee pain, hip pain, and foot & ankle pain.", benefits: ["Back & neck pain relief", "Sciatica treatment", "Knee & hip pain management", "Foot & ankle rehabilitation"] },
+  { icon: Waves, title: "Hydrotherapy & Aquatic Physiotherapy", desc: "Water-based rehabilitation programs that use buoyancy and resistance to improve mobility, strength, and recovery with minimal joint stress.", benefits: ["Low-impact rehabilitation", "Improved mobility", "Post-surgical aquatic rehab", "Arthritis management"] },
+  { icon: CircleDot, title: "Balance Exercise Therapy", desc: "Targeted balance and proprioception training to prevent falls, improve stability, and restore confidence in movement — especially for elderly patients.", benefits: ["Fall prevention", "Vestibular rehabilitation", "Proprioception training", "Stability improvement"] },
+  { icon: Baby, title: "Paediatric Physiotherapy", desc: "Gentle, age-appropriate physiotherapy for children with developmental delays, cerebral palsy, sports injuries, and postural concerns.", benefits: ["Developmental delay support", "Cerebral palsy rehab", "Postural correction", "Motor skill development"] },
+  { icon: Footprints, title: "Geriatric Physiotherapy", desc: "Specialized elderly care focusing on mobility preservation, fall prevention, joint health, and maintaining independence through safe, guided exercise programs.", benefits: ["Mobility preservation", "Joint health maintenance", "Strength building", "Independence support"] },
+  { icon: BedDouble, title: "Inpatient Rehabilitation", desc: "Comprehensive inpatient rehab programs for patients requiring intensive, supervised recovery — including paralysis treatment, post-surgical care, and critical illness recovery.", benefits: ["24/7 supervised care", "Intensive rehab programs", "Critical illness recovery", "Paralysis rehabilitation"] },
+  { icon: Activity, title: "Occupational Therapy", desc: "Helping patients regain the ability to perform daily activities after injury, surgery, or neurological events — restoring independence and quality of life.", benefits: ["Daily activity training", "Adaptive techniques", "Workplace ergonomics", "Cognitive rehabilitation"] },
 ];
 
 const ServicesPage = () => (
@@ -121,10 +46,10 @@ const ServicesPage = () => (
         <div className="space-y-6">
           {services.map((svc, i) => (
             <ScrollReveal key={svc.title} delay={i * 0.04}>
-              <div className="bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 grid md:grid-cols-[1fr_auto] gap-8 items-start">
+              <div className="bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 grid md:grid-cols-[1fr_auto] gap-8 items-start hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group">
                 <div>
-                  <div className="w-12 h-12 rounded-lg bg-teal-soft flex items-center justify-center mb-4">
-                    <svc.icon className="w-6 h-6 text-primary" />
+                  <div className="w-12 h-12 rounded-lg bg-teal-soft flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                    <svc.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                   </div>
                   <h2 className="font-display font-bold text-2xl text-foreground mb-3">{svc.title}</h2>
                   <p className="text-muted-foreground leading-relaxed mb-4">{svc.desc}</p>
@@ -137,7 +62,7 @@ const ServicesPage = () => (
                   </ul>
                 </div>
                 <Link to="/contact" className="shrink-0 self-center">
-                  <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground gap-2 active:scale-[0.97] transition-transform">
+                  <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground gap-2 active:scale-[0.97] transition-all duration-200 shadow-md shadow-secondary/20">
                     Book Now <ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
