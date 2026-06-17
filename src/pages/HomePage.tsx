@@ -148,12 +148,20 @@ const HomePage = () => (
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((svc, i) => (
           <ScrollReveal key={svc.title} delay={i * 0.06}>
-            <Link to="/services" className="group block bg-card rounded-xl p-7 shadow-sm hover:shadow-lg transition-all duration-300 h-full border border-border/50 hover:-translate-y-1">
-              <div className="w-12 h-12 rounded-lg bg-teal-soft flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                <svc.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+            <Link to="/services" className="group block bg-card rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 h-full border border-border/50 hover:-translate-y-1 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-teal-soft flex items-center justify-center group-hover:bg-primary group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                    <svc.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                  </div>
+                  <span className="shrink-0 w-8 h-8 rounded-full bg-muted flex items-center justify-center text-muted-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-200">
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
+                <h3 className="font-display font-semibold text-base mb-2 text-foreground group-hover:text-primary transition-colors duration-300">{svc.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{svc.desc}</p>
               </div>
-              <h3 className="font-display font-semibold text-base mb-2 text-foreground">{svc.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{svc.desc}</p>
             </Link>
           </ScrollReveal>
         ))}
