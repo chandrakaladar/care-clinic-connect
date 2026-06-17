@@ -2,18 +2,62 @@ import { useState, FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, MessageCircle, CalendarDays } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    concern: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleChange = (field: string, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    toast.success("Thank you! We'll contact you shortly to confirm your appointment.");
+    setLoading(true);
+
+    try {
+      const { error } = await supabase.from("appointment_requests").insert({
+        patient_name: formData.name,
+        phone: formData.phone,
+        email: formData.email || null,
+        concern: formData.concern,
+        message: formData.message || null,
+        source: "website_contact_form",
+        email_sent: false,
+      });
+
+      if (error) {
+        console.error("Supabase insert error:", error);
+        toast.error("Failed to submit. Please try again or call us directly.");
+        setLoading(false);
+        return;
+      }
+
+      setSubmitted(true);
+      toast.success("Appointment request received! We'll contact you shortly to confirm.");
+    } catch (err) {
+      console.error("Submit error:", err);
+      toast.error("Something went wrong. Please call us at 073308 33964.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const bookViaWhatsApp = () => {
+    const text = `Hello, I would like to book an appointment at We Care Physiotherapy Clinic.%0A%0A👤 Name: ${formData.name || "(not provided)"}%0A📞 Phone: ${formData.phone || "(not provided)"}%0A📧 Email: ${formData.email || "(not provided)"}%0A🩺 Concern: ${formData.concern || "(not provided)"}%0A📝 Message: ${formData.message || "(not provided)"}%0A%0APlease confirm my appointment. Thank you!`;
+    window.open(`https://wa.me/917330833964?text=${text}`, "_blank");
   };
 
   return (
@@ -63,6 +107,26 @@ const ContactPage = () => {
                 ))}
               </div>
 
+              {/* Quick WhatsApp CTA */}
+              <div className="bg-gradient-to-br from-[hsl(142_70%_45%)]/10 to-[hsl(142_70%_45%)]/5 rounded-2xl p-6 border border-[hsl(142_70%_45%)]/20">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-[hsl(142_70%_45%)]/15 flex items-center justify-center">
+                    <MessageCircle className="w-5 h-5 text-[hsl(142_70%_45%)]" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground text-sm">Prefer WhatsApp?</p>
+                    <p className="text-muted-foreground text-xs">Get instant replies</p>
+                  </div>
+                </div>
+                <Button
+                  onClick={bookViaWhatsApp}
+                  variant="outline"
+                  className="w-full border-[hsl(142_70%_45%)]/30 text-[hsl(142_70%_45%)] hover:bg-[hsl(142_70%_45%)] hover:text-white gap-2"
+                >
+                  <MessageCircle className="w-4 h-4" /> Book via WhatsApp
+                </Button>
+              </div>
+
               {/* Map */}
               <div className="rounded-2xl overflow-hidden shadow-sm border border-border/50 h-64">
                 <iframe
@@ -88,27 +152,59 @@ const ContactPage = () => {
                     <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-4" />
                     <h3 className="font-display font-bold text-2xl text-foreground mb-2">Thank You!</h3>
                     <p className="text-muted-foreground">We've received your request and will contact you within 24 hours to confirm your appointment.</p>
+                    <div className="mt-6 flex flex-wrap justify-center gap-3">
+                      <Button onClick={bookViaWhatsApp} variant="outline" className="gap-2 border-[hsl(142_70%_45%)]/30 text-[hsl(142_70%_45%)] hover:bg-[hsl(142_70%_45%)] hover:text-white">
+                        <MessageCircle className="w-4 h-4" /> Also Notify via WhatsApp
+                      </Button>
+                      <Button onClick={() => setSubmitted(false)} variant="outline" className="gap-2">
+                        <CalendarDays className="w-4 h-4" /> Book Another
+                      </Button>
+                    </div>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
                         <label className="text-sm font-medium text-foreground mb-1.5 block">Full Name *</label>
-                        <Input required placeholder="Your name" className="h-12" maxLength={100} />
+                        <Input
+                          required
+                          placeholder="Your name"
+                          className="h-12"
+                          maxLength={100}
+                          value={formData.name}
+                          onChange={(e) => handleChange("name", e.target.value)}
+                        />
                       </div>
                       <div>
                         <label className="text-sm font-medium text-foreground mb-1.5 block">Phone Number *</label>
-                        <Input required type="tel" placeholder="+91 XXXXX XXXXX" className="h-12" maxLength={15} />
+                        <Input
+                          required
+                          type="tel"
+                          placeholder="+91 XXXXX XXXXX"
+                          className="h-12"
+                          maxLength={15}
+                          value={formData.phone}
+                          onChange={(e) => handleChange("phone", e.target.value)}
+                        />
                       </div>
                     </div>
                     <div>
                       <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
-                      <Input type="email" placeholder="your@email.com" className="h-12" maxLength={255} />
+                      <Input
+                        type="email"
+                        placeholder="your@email.com"
+                        className="h-12"
+                        maxLength={255}
+                        value={formData.email}
+                        onChange={(e) => handleChange("email", e.target.value)}
+                      />
                     </div>
                     <div>
                       <label className="text-sm font-medium text-foreground mb-1.5 block">Condition / Concern *</label>
                       <select
                         required
+                        value={formData.concern}
+                        onChange={(e) => handleChange("concern", e.target.value)}
                         className="w-full h-12 rounded-lg border border-input bg-background px-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                       >
                         <option value="">Select your concern</option>
@@ -128,11 +224,34 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
-                      <Textarea placeholder="Briefly describe your condition or preferred appointment time..." rows={4} maxLength={1000} />
+                      <Textarea
+                        placeholder="Briefly describe your condition or preferred appointment time..."
+                        rows={4}
+                        maxLength={1000}
+                        value={formData.message}
+                        onChange={(e) => handleChange("message", e.target.value)}
+                      />
                     </div>
-                    <Button type="submit" size="lg" className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground gap-2 active:scale-[0.97] transition-transform">
-                      <Send className="w-4 h-4" /> Send Appointment Request
-                    </Button>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Button
+                        type="submit"
+                        size="lg"
+                        disabled={loading}
+                        className="flex-1 bg-secondary hover:bg-secondary/90 text-secondary-foreground gap-2 active:scale-[0.97] transition-transform"
+                      >
+                        <Send className="w-4 h-4" />
+                        {loading ? "Submitting..." : "Send Appointment Request"}
+                      </Button>
+                      <Button
+                        type="button"
+                        size="lg"
+                        variant="outline"
+                        onClick={bookViaWhatsApp}
+                        className="flex-1 border-[hsl(142_70%_45%)]/30 text-[hsl(142_70%_45%)] hover:bg-[hsl(142_70%_45%)] hover:text-white gap-2"
+                      >
+                        <MessageCircle className="w-4 h-4" /> Book via WhatsApp
+                      </Button>
+                    </div>
                   </form>
                 )}
               </div>
