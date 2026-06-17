@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Bone, Activity, Brain, Heart, Zap, Hand, Droplets, Flame, Baby, Footprints, CircleDot, Waves, BedDouble, Scissors } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
+import { motion } from "framer-motion";
 
 const services = [
   { icon: Bone, title: "Orthopedic Physiotherapy", desc: "Expert treatment for joint pain, arthritis, frozen shoulder, back pain, neck pain, and all musculoskeletal conditions using manual therapy, therapeutic exercises, and advanced modalities.", benefits: ["Joint mobilization & manipulation", "Posture correction", "Arthritis management", "Spine rehabilitation"] },
@@ -39,34 +40,63 @@ const ServicesPage = () => (
             Advanced Chiropractic & Osteopathy, Dry Needling, Myofascial Release, Cupping Therapy, Paralysis Treatment — all under one roof.
           </p>
           <p className="inline-block bg-primary/10 text-primary font-semibold text-sm px-4 py-2 rounded-full">
-            We Follow International Rehab Protocols
+            ✦ We Follow International Rehab Protocols
           </p>
         </ScrollReveal>
 
-        <div className="space-y-6">
+        {/* Services Grid — cbphysiotherapy.in style */}
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {services.map((svc, i) => (
             <ScrollReveal key={svc.title} delay={i * 0.04}>
-              <div className="bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50 grid md:grid-cols-[1fr_auto] gap-8 items-start hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group">
-                <div>
-                  <div className="w-12 h-12 rounded-lg bg-teal-soft flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                    <svc.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+              <motion.div
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                className="group bg-card rounded-2xl p-7 shadow-sm border border-border/50 h-full flex flex-col hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
+              >
+                {/* Subtle gradient overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex items-start justify-between mb-5">
+                    <div className="w-14 h-14 rounded-2xl bg-teal-soft flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300 group-hover:rotate-3">
+                      <svc.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                    </div>
+                    <Link
+                      to="/contact"
+                      className="shrink-0 w-9 h-9 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+                    >
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
                   </div>
-                  <h2 className="font-display font-bold text-2xl text-foreground mb-3">{svc.title}</h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">{svc.desc}</p>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+
+                  <h2 className="font-display font-bold text-xl text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                    {svc.title}
+                  </h2>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-5 flex-1">
+                    {svc.desc}
+                  </p>
+
+                  <div className="space-y-2 pt-4 border-t border-border/40">
                     {svc.benefits.map((b) => (
-                      <li key={b} className="flex items-center gap-2 text-sm text-foreground/70">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" /> {b}
-                      </li>
+                      <div key={b} className="flex items-center gap-2.5 text-sm text-foreground/70">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                        {b}
+                      </div>
                     ))}
-                  </ul>
+                  </div>
+
+                  <div className="mt-6">
+                    <Link to="/contact">
+                      <Button
+                        size="sm"
+                        className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground gap-2 active:scale-[0.97] transition-all duration-200 shadow-md shadow-secondary/20"
+                      >
+                        Book Appointment <ArrowRight className="w-3.5 h-3.5" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
-                <Link to="/contact" className="shrink-0 self-center">
-                  <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground gap-2 active:scale-[0.97] transition-all duration-200 shadow-md shadow-secondary/20">
-                    Book Now <ArrowRight className="w-4 h-4" />
-                  </Button>
-                </Link>
-              </div>
+              </motion.div>
             </ScrollReveal>
           ))}
         </div>
