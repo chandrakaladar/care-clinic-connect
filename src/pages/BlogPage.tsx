@@ -41,8 +41,27 @@ const posts = [
 const BlogPage = () => (
   <>
     <SEOHead
-      title="Physiotherapy Blog | Health Tips & Recovery Guides | We Care Guntur"
-      description="Read expert physiotherapy articles, pain relief tips, and rehabilitation guides from We Care Physiotherapy Clinic in Guntur. Stay informed about your health."
+      title="Blog | Physiotherapy Tips & Recovery Guides"
+      description="Expert physiotherapy articles, pain relief tips, and recovery guides from We Care Physiotherapy Clinic in Guntur."
+      canonical="/blog"
+      jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        name: "We Care Physiotherapy Blog",
+        description:
+          "Expert physiotherapy articles, pain relief tips and recovery guides from We Care Physiotherapy Clinic in Guntur.",
+        blogPost: posts.map((p) => ({
+          "@type": "BlogPosting",
+          headline: p.title,
+          description: p.excerpt,
+          datePublished: p.date,
+          url: `/blog/${p.slug}`,
+          author: {
+            "@type": "Organization",
+            name: "We Care Physiotherapy & Chiropractic Clinic",
+          },
+        })),
+      }}
     />
     <section className="bg-surface-warm py-16 md:py-24">
       <div className="container max-w-4xl">
