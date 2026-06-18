@@ -1,0 +1,18 @@
+# We Care Physiotherapy & Sports & Chiropractic Clinic — Guntur
+
+> Advanced physiotherapy, chiropractic, and rehabilitation clinic in Kothapeta, Guntur, Andhra Pradesh. Specializes in dry needling, myofascial release, cupping therapy, sports rehab, paralysis treatment, and post-surgery recovery — following international rehab protocols.
+
+## Pages
+- [Home](/): Clinic overview, services, doctors, and contact options.
+- [About Us](/about): Mission, values, and the international rehab protocols we follow.
+- [Services](/services): 15+ services — orthopedic, sports, neuro, post-surgery, chiropractic, dry needling, cupping, myofascial release, paediatric, geriatric, pain management, and more.
+- [Our Doctors](/team): Dr. R. Chandra Kaladar and Dr. M. Sailaja — Chief Physiotherapists, MPT (Sports), MIAP, CDNT.
+- [Testimonials](/testimonials): Patient success stories and reviews.
+- [Blog](/blog): Health tips, recovery guides, and physiotherapy articles.
+- [Contact](/contact): Book appointment, phone, WhatsApp, address, and FAQs.
+
+## Contact
+- Phone: 073308 33964 / 070364 67752
+- Email: chandrakaladar@gmail.com
+- Address: Door No 13, 5-18, 4th Lane, near Kamaraju Diagnostic Centre, Gunturvari Thota, Kothapeta, Guntur, AP 522001
+- Hours: Open daily, closes 11 PM
