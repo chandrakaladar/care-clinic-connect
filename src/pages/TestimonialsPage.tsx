@@ -16,8 +16,9 @@ const testimonials = [
 const TestimonialsPage = () => (
   <>
     <SEOHead
-      title="Patient Testimonials | We Care Physiotherapy Guntur Reviews"
-      description="Read patient success stories from We Care Physiotherapy Clinic in Guntur. Real reviews from patients who recovered from back pain, knee surgery, sports injuries, and more."
+      title="Patient Reviews | We Care Physiotherapy Guntur"
+      description="Real patient success stories from We Care Physiotherapy Guntur — back pain, knee surgery, sports injuries, paralysis recovery."
+      canonical="/testimonials"
     />
     <section className="bg-surface-warm py-16 md:py-24">
       <div className="container">

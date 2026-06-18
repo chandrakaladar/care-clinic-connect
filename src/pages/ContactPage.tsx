@@ -8,6 +8,14 @@ import SEOHead from "@/components/SEOHead";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 
+const faqs = [
+  { q: "Do I need a doctor's referral for physiotherapy?", a: "No, you can directly visit We Care Physiotherapy Clinic in Guntur without a referral. However, if you're recovering from surgery, bringing your medical reports helps us create a better treatment plan." },
+  { q: "How many sessions will I need?", a: "The number of sessions depends on your condition, severity, and goals. Typically, patients see improvement within 4–8 sessions. Our physiotherapist will discuss a personalized treatment plan during your first visit." },
+  { q: "What services do you specialize in?", a: "We specialize in Advanced Chiropractic & Osteopathy, Dry Needling, Myofascial Release, Cupping Therapy, Paralysis Treatment, Sports Rehab, and many more — all following international rehabilitation protocols." },
+  { q: "What are your clinic hours?", a: "We are open daily and close at 11 PM. Walk-ins are welcome, but we recommend booking an appointment to avoid waiting. Call us at 073308 33964." },
+  { q: "Do you accept health insurance?", a: "Yes, we work with most major health insurance providers. Please contact us with your insurance details and we'll help you understand your coverage for physiotherapy treatment." },
+];
+
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -63,8 +71,18 @@ const ContactPage = () => {
   return (
     <>
       <SEOHead
-        title="Contact Us | Book Appointment | We Care Physiotherapy Guntur"
-        description="Book an appointment at We Care Physiotherapy Clinic in Kothapeta, Guntur. Call 073308 33964, WhatsApp, or fill out our form. Open daily till 11 PM."
+        title="Contact Us | Book Appointment in Guntur"
+        description="Book an appointment at We Care Physiotherapy in Kothapeta, Guntur. Call 073308 33964, WhatsApp, or fill our form. Open till 11 PM."
+        canonical="/contact"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }}
       />
       <section className="bg-surface-warm py-16 md:py-24">
         <div className="container">
@@ -165,8 +183,10 @@ const ContactPage = () => {
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="text-sm font-medium text-foreground mb-1.5 block">Full Name *</label>
+                        <label htmlFor="contact-name" className="text-sm font-medium text-foreground mb-1.5 block">Full Name *</label>
                         <Input
+                          id="contact-name"
+                          name="name"
                           required
                           placeholder="Your name"
                           className="h-12"
@@ -176,8 +196,10 @@ const ContactPage = () => {
                         />
                       </div>
                       <div>
-                        <label className="text-sm font-medium text-foreground mb-1.5 block">Phone Number *</label>
+                        <label htmlFor="contact-phone" className="text-sm font-medium text-foreground mb-1.5 block">Phone Number *</label>
                         <Input
+                          id="contact-phone"
+                          name="phone"
                           required
                           type="tel"
                           placeholder="+91 XXXXX XXXXX"
@@ -189,8 +211,10 @@ const ContactPage = () => {
                       </div>
                     </div>
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
+                      <label htmlFor="contact-email" className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
                       <Input
+                        id="contact-email"
+                        name="email"
                         type="email"
                         placeholder="your@email.com"
                         className="h-12"
@@ -200,8 +224,10 @@ const ContactPage = () => {
                       />
                     </div>
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-1.5 block">Condition / Concern *</label>
+                      <label htmlFor="contact-concern" className="text-sm font-medium text-foreground mb-1.5 block">Condition / Concern *</label>
                       <select
+                        id="contact-concern"
+                        name="concern"
                         required
                         value={formData.concern}
                         onChange={(e) => handleChange("concern", e.target.value)}
@@ -223,8 +249,10 @@ const ContactPage = () => {
                       </select>
                     </div>
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
+                      <label htmlFor="contact-message" className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
                       <Textarea
+                        id="contact-message"
+                        name="message"
                         placeholder="Briefly describe your condition or preferred appointment time..."
                         rows={4}
                         maxLength={1000}
@@ -265,13 +293,7 @@ const ContactPage = () => {
         <ScrollReveal className="mb-10">
           <h2 className="font-display font-bold text-3xl text-foreground text-center">Frequently Asked Questions</h2>
         </ScrollReveal>
-        {[
-          { q: "Do I need a doctor's referral for physiotherapy?", a: "No, you can directly visit We Care Physiotherapy Clinic in Guntur without a referral. However, if you're recovering from surgery, bringing your medical reports helps us create a better treatment plan." },
-          { q: "How many sessions will I need?", a: "The number of sessions depends on your condition, severity, and goals. Typically, patients see improvement within 4–8 sessions. Our physiotherapist will discuss a personalized treatment plan during your first visit." },
-          { q: "What services do you specialize in?", a: "We specialize in Advanced Chiropractic & Osteopathy, Dry Needling, Myofascial Release, Cupping Therapy, Paralysis Treatment, Sports Rehab, and many more — all following international rehabilitation protocols." },
-          { q: "What are your clinic hours?", a: "We are open daily and close at 11 PM. Walk-ins are welcome, but we recommend booking an appointment to avoid waiting. Call us at 073308 33964." },
-          { q: "Do you accept health insurance?", a: "Yes, we work with most major health insurance providers. Please contact us with your insurance details and we'll help you understand your coverage for physiotherapy treatment." },
-        ].map((faq, i) => (
+        {faqs.map((faq, i) => (
           <ScrollReveal key={i} delay={i * 0.05}>
             <div className="border-b border-border py-6">
               <h3 className="font-display font-semibold text-lg text-foreground mb-2">{faq.q}</h3>

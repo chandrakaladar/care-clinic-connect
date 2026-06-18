@@ -17,8 +17,9 @@ const values = [
 const AboutPage = () => (
   <>
     <SEOHead
-      title="About Us | We Care Physiotherapy Clinic Guntur"
-      description="Learn about We Care Physiotherapy & Sports & Chiropractic Clinic in Guntur. 12+ years of expert physiotherapy care, 8500+ patients treated with a 97% recovery rate."
+      title="About Us | We Care Physiotherapy Guntur"
+      description="12+ years of expert physiotherapy in Guntur. 8,500+ patients treated, 97% recovery rate. International rehab protocols."
+      canonical="/about"
     />
     <section className="bg-surface-warm py-16 md:py-24">
       <div className="container max-w-4xl">

@@ -26,8 +26,9 @@ const services = [
 const ServicesPage = () => (
   <>
     <SEOHead
-      title="Physiotherapy Services in Guntur | Chiropractic, Dry Needling, Sports Rehab"
-      description="Explore our 15+ physiotherapy services in Guntur: chiropractic care, dry needling, myofascial release, cupping therapy, paralysis treatment, sports rehab, and more. International rehab protocols."
+      title="Services | Physiotherapy & Chiropractic in Guntur"
+      description="15+ services in Guntur: chiropractic, dry needling, myofascial release, cupping, paralysis treatment, sports rehab. International protocols."
+      canonical="/services"
     />
     <section className="bg-surface-warm py-16 md:py-24">
       <div className="container">
