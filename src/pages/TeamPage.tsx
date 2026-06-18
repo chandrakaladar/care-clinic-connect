@@ -31,8 +31,9 @@ const team = [
 const TeamPage = () => (
   <>
     <SEOHead
-      title="Our Doctors | Best Physiotherapists in Guntur | We Care Clinic"
-      description="Meet Dr. R. Chandra Kaladar and Dr. M. Sailaja — Chief Physiotherapists at We Care Clinic Guntur. MPT (Sports), MIAP, CDNT certified specialists."
+      title="Our Doctors | Best Physiotherapists in Guntur"
+      description="Meet Dr. R. Chandra Kaladar & Dr. M. Sailaja — Chief Physiotherapists, MPT (Sports), MIAP, CDNT certified."
+      canonical="/team"
     />
     <section className="bg-surface-warm py-16 md:py-24">
       <div className="container">

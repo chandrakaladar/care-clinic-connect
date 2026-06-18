@@ -34,8 +34,9 @@ const miniTestimonials = [
 const HomePage = () => (
   <>
     <SEOHead
-      title="Best Physiotherapy Clinic in Guntur | We Care Physiotherapy & Sports Clinic"
-      description="We Care Physiotherapy & Sports & Chiropractic Clinic in Guntur — Advanced Chiropractic, Dry Needling, Myofascial Release, Cupping Therapy, Paralysis Treatment. International rehab protocols. Book now."
+      title="Best Physiotherapy Clinic in Guntur | We Care"
+      description="Advanced chiropractic, dry needling, myofascial release, cupping & paralysis treatment in Guntur. International rehab protocols. Book now."
+      canonical="/"
     />
 
     {/* Hero */}
