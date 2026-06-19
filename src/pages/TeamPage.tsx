@@ -10,21 +10,33 @@ import docSailaja from "@/assets/doctor-sailaja.png.asset.json";
 const team = [
   {
     name: "Dr. R. Chandra Kaladar",
-    role: "Chief Physiotherapist",
+    role: "CHIEF MUSCULOSKELETAL & SPORTS PHYSIOTHERAPIST",
     img: docChandra.url,
     bio: "Dr. Chandra Kaladar leads We Care Physiotherapy with deep expertise in sports physiotherapy, dry needling, and advanced rehabilitation. Following international rehab protocols, he delivers evidence-based treatment for athletes and patients recovering from complex injuries and surgeries.",
     qualifications: "MPT (Sports), MIAP, CDNT",
     experience: "12+ Years",
-    specialties: ["Sports Rehab", "Dry Needling", "Chiropractic"],
+    specialties: [
+      "CERTIFIED IN REHAB: SPORTS INJURIES",
+      "CERTIFIED IN: MUSCULOSKELETAL INJURIES",
+      "CERTIFIED IN: LIGAMENT INJURIES",
+      "CERTIFIED IN: JOINT REPLACEMENT & PAIN MANAGEMENT",
+      "CERTIFIED BIOMECHANICAL CORRECTION OF SPINE",
+    ],
   },
   {
     name: "Dr. M. Sailaja",
-    role: "Chief Physiotherapist",
+    role: "CHIEF MUSCULOSKELETAL & SPORTS PHYSIOTHERAPIST",
     img: docSailaja.url,
     bio: "Dr. Sailaja specializes in sports rehabilitation, chiropractic care, and neurological recovery. With advanced training in myofascial release and cupping therapy, she brings a compassionate, patient-first approach to every treatment plan.",
     qualifications: "MPT (Sports), MIAP, CDNT",
     experience: "10+ Years",
-    specialties: ["Neuro Rehab", "Cupping Therapy", "Myofascial Release"],
+    specialties: [
+      "CERTIFIED IN REHAB: SPORTS INJURIES",
+      "CERTIFIED IN: MUSCULOSKELETAL INJURIES",
+      "CERTIFIED IN: LIGAMENT INJURIES",
+      "CERTIFIED IN: JOINT REPLACEMENT & PAIN MANAGEMENT",
+      "CERTIFIED BIOMECHANICAL CORRECTION OF SPINE",
+    ],
   },
 ];
 
