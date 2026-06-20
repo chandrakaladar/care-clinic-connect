@@ -4,8 +4,8 @@ import { ArrowRight, Phone, Mail, Award, BookOpen, Star, CalendarCheck } from "l
 import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
-import docChandra from "@/assets/doctor-chandra-kaladar.jpeg.asset.json";
-import docSailaja from "@/assets/doctor-sailaja.png.asset.json";
+import docChandra from "/images/doctor-chandra-kaladar.jpeg";
+import docSailaja from "/images/doctor-sailaja.png";
 
 const team = [
   {
