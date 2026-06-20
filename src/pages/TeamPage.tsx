@@ -4,14 +4,12 @@ import { ArrowRight, Phone, Mail, Award, BookOpen, Star, CalendarCheck } from "l
 import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
-import docChandra from "/images/doctor-chandra-kaladar.jpeg";
-import docSailaja from "/images/doctor-sailaja.png";
 
 const team = [
   {
     name: "Dr. R. Chandra Kaladar",
     role: "CHIEF MUSCULOSKELETAL & SPORTS PHYSIOTHERAPIST",
-    img: docChandra,
+    img: "/images/doctor-chandra-kaladar.jpeg",
     bio: "Dr. Chandra Kaladar leads We Care Physiotherapy with deep expertise in sports physiotherapy, dry needling, and advanced rehabilitation. Following international rehab protocols, he delivers evidence-based treatment for athletes and patients recovering from complex injuries and surgeries.",
     qualifications: "MPT (Sports), MIAP, CDNT",
     experience: "12+ Years",
@@ -26,7 +24,7 @@ const team = [
   {
     name: "Dr. M. Sailaja",
     role: "CHIEF MUSCULOSKELETAL & SPORTS PHYSIOTHERAPIST",
-    img: docSailaja,
+    img: "/images/doctor-sailaja.png",
     bio: "Dr. Sailaja specializes in sports rehabilitation, chiropractic care, and neurological recovery. With advanced training in myofascial release and cupping therapy, she brings a compassionate, patient-first approach to every treatment plan.",
     qualifications: "MPT (Sports), MIAP, CDNT",
     experience: "10+ Years",
