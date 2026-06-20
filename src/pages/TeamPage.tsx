@@ -26,7 +26,7 @@ const team = [
   {
     name: "Dr. M. Sailaja",
     role: "CHIEF MUSCULOSKELETAL & SPORTS PHYSIOTHERAPIST",
-    img: docSailaja.url,
+    img: docSailaja,
     bio: "Dr. Sailaja specializes in sports rehabilitation, chiropractic care, and neurological recovery. With advanced training in myofascial release and cupping therapy, she brings a compassionate, patient-first approach to every treatment plan.",
     qualifications: "MPT (Sports), MIAP, CDNT",
     experience: "10+ Years",
