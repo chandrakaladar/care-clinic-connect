@@ -11,7 +11,7 @@ const team = [
   {
     name: "Dr. R. Chandra Kaladar",
     role: "CHIEF MUSCULOSKELETAL & SPORTS PHYSIOTHERAPIST",
-    img: docChandra.url,
+    img: docChandra,
     bio: "Dr. Chandra Kaladar leads We Care Physiotherapy with deep expertise in sports physiotherapy, dry needling, and advanced rehabilitation. Following international rehab protocols, he delivers evidence-based treatment for athletes and patients recovering from complex injuries and surgeries.",
     qualifications: "MPT (Sports), MIAP, CDNT",
     experience: "12+ Years",
