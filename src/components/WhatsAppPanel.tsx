@@ -47,7 +47,11 @@ const WhatsAppPanel = ({ phone = "917330833964" }: WhatsAppPanelProps) => {
                   <p className="text-white/80 text-xs">We Care Physiotherapy</p>
                 </div>
               </div>
-              <button onClick={() => setOpen(false)} className="text-white/80 hover:text-white transition-colors">
+              <button
+                onClick={() => setOpen(false)}
+                aria-label="Close WhatsApp booking panel"
+                className="text-white/80 hover:text-white transition-colors"
+              >
                 <X className="w-5 h-5" />
               </button>
             </div>
