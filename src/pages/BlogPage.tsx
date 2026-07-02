@@ -91,9 +91,10 @@ const BlogPage = () => (
                 <p className="text-muted-foreground leading-relaxed mb-4">{post.excerpt}</p>
                 <Link
                   to={`/blog/${post.slug}`}
+                  aria-label={`Read the full guide on ${post.title}`}
                   className="inline-flex items-center gap-1.5 text-primary font-medium text-sm hover:gap-3 transition-all duration-200"
                 >
-                  Read More <ArrowRight className="w-4 h-4" />
+                  Read the full guide on {post.title} <ArrowRight className="w-4 h-4" />
                 </Link>
               </article>
             </ScrollReveal>

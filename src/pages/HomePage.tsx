@@ -90,6 +90,10 @@ const HomePage = () => (
               <img
                 src={heroImg}
                 alt="We Care Physiotherapy & Chiropractic Clinic interior in Guntur"
+                width={1200}
+                height={800}
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-[360px] md:h-[460px] object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="eager"
               />
