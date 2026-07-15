@@ -5,6 +5,14 @@ import SEOHead from "@/components/SEOHead";
 
 const posts = [
   {
+    slug: "what-is-ift-physiotherapy",
+    title: "What is IFT Physiotherapy? Benefits, Uses & How It Works",
+    excerpt: "IFT (Interferential Therapy) is one of the most effective non-invasive treatments for back pain, knee pain and sports injuries. Learn how our Guntur physiotherapists use it to speed up your recovery.",
+    date: "July 2, 2026",
+    category: "Electrotherapy",
+    readTime: "8 min read",
+  },
+  {
     slug: "best-exercises-for-back-pain",
     title: "Best Exercises for Back Pain Relief",
     excerpt: "Suffering from lower back pain? Discover the top physiotherapist-recommended exercises you can do at home to strengthen your back and reduce pain naturally.",

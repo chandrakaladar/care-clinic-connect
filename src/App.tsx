@@ -11,6 +11,7 @@ import ServicesPage from "@/pages/ServicesPage";
 import TeamPage from "@/pages/TeamPage";
 import TestimonialsPage from "@/pages/TestimonialsPage";
 import BlogPage from "@/pages/BlogPage";
+import BlogPostIFT from "@/pages/BlogPostIFT";
 import ContactPage from "@/pages/ContactPage";
 import NotFound from "@/pages/NotFound";
 
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/team" element={<TeamPage />} />
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/what-is-ift-physiotherapy" element={<BlogPostIFT />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
