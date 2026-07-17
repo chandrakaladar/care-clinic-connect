@@ -13,6 +13,7 @@ import TestimonialsPage from "@/pages/TestimonialsPage";
 import BlogPage from "@/pages/BlogPage";
 import BlogPostIFT from "@/pages/BlogPostIFT";
 import ContactPage from "@/pages/ContactPage";
+import LocationServicePage from "@/pages/LocationServicePage";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/what-is-ift-physiotherapy" element={<BlogPostIFT />} />
+            <Route path="/physiotherapy/:slug" element={<LocationServicePage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
