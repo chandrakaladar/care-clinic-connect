@@ -4,6 +4,7 @@ import { ArrowRight, Bone, Activity, Brain, Heart, Zap, Hand, Droplets, Flame, B
 import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
+import { services as locationServices, areas, buildSlug } from "@/data/locationServices";
 
 const services = [
   { icon: Bone, title: "Orthopedic Physiotherapy", desc: "Expert treatment for joint pain, arthritis, frozen shoulder, back pain, neck pain, and all musculoskeletal conditions using manual therapy, therapeutic exercises, and advanced modalities.", benefits: ["Joint mobilization & manipulation", "Posture correction", "Arthritis management", "Spine rehabilitation"] },
@@ -98,6 +99,41 @@ const ServicesPage = () => (
                   </div>
                 </div>
               </motion.div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Areas We Serve — Guntur local SEO landing pages */}
+    <section className="bg-background py-16 md:py-20 border-t border-border/40">
+      <div className="container">
+        <ScrollReveal className="text-center mb-10 max-w-3xl mx-auto">
+          <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-3">Areas We Serve</p>
+          <h2 className="font-display font-extrabold text-3xl md:text-4xl text-foreground leading-tight mb-3">
+            Physiotherapy across Guntur neighbourhoods
+          </h2>
+          <p className="text-muted-foreground">
+            Dedicated care pages for patients searching from their locality — Kothapeta, Brodipet, Arundelpet and Lakshmipuram.
+          </p>
+        </ScrollReveal>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {areas.map((area) => (
+            <ScrollReveal key={area.slug} className="p-5 rounded-2xl bg-card border border-border/60">
+              <h3 className="font-semibold text-foreground text-lg mb-3">{area.name}, Guntur</h3>
+              <ul className="space-y-1.5 text-sm">
+                {locationServices.map((svc) => (
+                  <li key={svc.slug}>
+                    <Link
+                      to={`/physiotherapy/${buildSlug(svc, area)}`}
+                      className="text-primary hover:underline"
+                    >
+                      {svc.name} in {area.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </ScrollReveal>
           ))}
         </div>
