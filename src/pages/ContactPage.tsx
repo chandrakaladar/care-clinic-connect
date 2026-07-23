@@ -190,13 +190,13 @@ const ContactPage = () => {
                 </div>
                 <div className="p-4 border-t border-border/50">
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=We+Care+Physiotherapy+%26+Sports+%26+Chiropractic+Clinic,+Door+No+13,+5-18,+4th+Lane,+near+Kamaraju+Diagnostic+Center,+Gunturvari+Thota,+Kothapeta,+Guntur,+Andhra+Pradesh+522001"
+                    href="https://maps.google.com/maps?q=We+Care+Physiotherapy+%26+Sports+%26+Chiropractic+Clinic,+Door+No+13,+5-18,+4th+Lane,+near+Kamaraju+Diagnostic+Center,+Gunturvari+Thota,+Kothapeta,+Guntur,+Andhra+Pradesh+522001"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
                   >
                     <MapPin className="w-4 h-4" />
-                    Get directions to our clinic
+                    Open in Google Maps
                   </a>
                 </div>
               </div>
