@@ -146,17 +146,31 @@ const ContactPage = () => {
               </div>
 
               {/* Map */}
-              <div className="rounded-2xl overflow-hidden shadow-sm border border-border/50 h-64">
-                <iframe
-                  title="We Care Physiotherapy Clinic Guntur Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.9!2d80.4365!3d16.3067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a754b37e46a73%3A0x648d07a4c0f43e7!2sKothapeta%2C%20Guntur%2C%20Andhra%20Pradesh%20522001!5e0!3m2!1sen!2sin!4v1700000000000"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
+              <div className="rounded-2xl overflow-hidden shadow-sm border border-border/50 bg-card">
+                <div className="h-72 md:h-80">
+                  <iframe
+                    title="We Care Physiotherapy Clinic Location in Kothapeta, Guntur"
+                    src="https://www.google.com/maps?q=We+Care+Physiotherapy+%26+Sports+%26+Chiropractic+Clinic,+Door+No+13,+5-18,+4th+Lane,+near+Kamaraju+Diagnostic+Center,+Gunturvari+Thota,+Kothapeta,+Guntur,+Andhra+Pradesh+522001&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    aria-label="Google Map showing We Care Physiotherapy Clinic location in Kothapeta, Guntur"
+                  />
+                </div>
+                <div className="p-4 border-t border-border/50">
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=We+Care+Physiotherapy+%26+Sports+%26+Chiropractic+Clinic,+Door+No+13,+5-18,+4th+Lane,+Kothapeta,+Guntur,+Andhra+Pradesh+522001"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  >
+                    <MapPin className="w-4 h-4" />
+                    Get directions to our clinic
+                  </a>
+                </div>
               </div>
             </ScrollReveal>
 
