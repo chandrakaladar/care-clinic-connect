@@ -74,15 +74,43 @@ const ContactPage = () => {
         title="Contact Us | Book Appointment in Guntur"
         description="Book an appointment at We Care Physiotherapy in Kothapeta, Guntur. Call 073308 33964, WhatsApp, or fill our form. Open till 11 PM."
         canonical="/contact"
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: faqs.map((f) => ({
-            "@type": "Question",
-            name: f.q,
-            acceptedAnswer: { "@type": "Answer", text: f.a },
-          })),
-        }}
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Physiotherapy",
+            name: "We Care Physiotherapy & Sports & Chiropractic Clinic",
+            image: "https://carewell-clinic-web.lovable.app/images/clinic-hero.jpg",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Door No: 13, 5-18, 4th Lane, near Kamaraju Diagnostic Centre, Gunturvari Thota",
+              addressLocality: "Kothapeta, Guntur",
+              addressRegion: "Andhra Pradesh",
+              postalCode: "522001",
+              addressCountry: "IN",
+            },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: "16.3067",
+              longitude: "80.4365",
+            },
+            telephone: "+917330833964",
+            openingHours: "Mo-Su 00:00-23:00",
+            url: "https://carewell-clinic-web.lovable.app/contact",
+            areaServed: {
+              "@type": "City",
+              name: "Guntur",
+            },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
+          },
+        ]}
       />
       <section className="bg-surface-warm py-16 md:py-24">
         <div className="container">
