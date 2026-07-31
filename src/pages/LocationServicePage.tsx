@@ -21,8 +21,13 @@ const LocationServicePage = () => {
   if (!match) return <Navigate to="/services" replace />;
 
   const { service, area } = match;
-  const title = `${service.name} in ${area.name}, Guntur | We Care Clinic`;
-  const description = `Trusted ${service.shortName} treatment in ${area.name}, Guntur — ${area.distance} ${area.name}. Evidence-based physiotherapy, expert care & flexible timings. Call ${PHONE}.`;
+  const clamp = (text: string, max: number) =>
+    text.length <= max ? text : `${text.slice(0, max - 1).trimEnd()}…`;
+  const title = clamp(`${service.name} in ${area.name}, Guntur`, 60);
+  const description = clamp(
+    `Expert ${service.shortName} physiotherapy in ${area.name}, Guntur. Evidence-based care, flexible timings. Call ${PHONE}.`,
+    160,
+  );
   const canonical = `/physiotherapy/${slug}`;
 
   const jsonLd = [

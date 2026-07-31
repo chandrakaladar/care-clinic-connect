@@ -5,6 +5,8 @@ interface SEOHeadProps {
   description: string;
   /** Self-referencing path (e.g. "/about"). Defaults to current pathname. */
   canonical?: string;
+  /** Open Graph type; use "article" for blog posts. */
+  ogType?: "website" | "article";
   /** Optional JSON-LD object(s) to inject for this page. */
   jsonLd?: object | object[];
 }
@@ -23,7 +25,9 @@ const setMeta = (
   el.setAttribute(attr, value);
 };
 
-const SEOHead = ({ title, description, canonical, jsonLd }: SEOHeadProps) => {
+const SITE_URL = "https://carewell-clinic-web.lovable.app";
+
+const SEOHead = ({ title, description, canonical, ogType = "website", jsonLd }: SEOHeadProps) => {
   useEffect(() => {
     document.title = title;
 
@@ -34,7 +38,8 @@ const SEOHead = ({ title, description, canonical, jsonLd }: SEOHeadProps) => {
     });
 
     const path = canonical ?? window.location.pathname;
-    setMeta('link[rel="canonical"]', "href", path, () => {
+    const absolute = `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+    setMeta('link[rel="canonical"]', "href", absolute, () => {
       const l = document.createElement("link");
       l.setAttribute("rel", "canonical");
       return l;
@@ -50,12 +55,12 @@ const SEOHead = ({ title, description, canonical, jsonLd }: SEOHeadProps) => {
       m.setAttribute("property", "og:description");
       return m;
     });
-    setMeta('meta[property="og:url"]', "content", path, () => {
+    setMeta('meta[property="og:url"]', "content", absolute, () => {
       const m = document.createElement("meta");
       m.setAttribute("property", "og:url");
       return m;
     });
-    setMeta('meta[property="og:type"]', "content", "website", () => {
+    setMeta('meta[property="og:type"]', "content", ogType, () => {
       const m = document.createElement("meta");
       m.setAttribute("property", "og:type");
       return m;
@@ -90,7 +95,7 @@ const SEOHead = ({ title, description, canonical, jsonLd }: SEOHeadProps) => {
         document.head.appendChild(s);
       });
     }
-  }, [title, description, canonical, jsonLd]);
+  }, [title, description, canonical, ogType, jsonLd]);
 
   return null;
 };
