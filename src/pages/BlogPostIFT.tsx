@@ -33,11 +33,16 @@ const BlogPostIFT = () => (
       title="What is IFT Physiotherapy? Benefits & Uses | Guntur"
       description="IFT (Interferential Therapy) explained by physiotherapists in Guntur. Learn how it relieves back, knee & joint pain, session cost, and who it's for."
       canonical="/blog/what-is-ift-physiotherapy"
+      ogType="article"
       jsonLd={[
         {
           "@context": "https://schema.org",
-          "@type": "MedicalWebPage",
+          "@type": "BlogPosting",
           headline: "What is IFT Physiotherapy? Benefits, Uses & How It Works",
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": "https://carewell-clinic-web.lovable.app/blog/what-is-ift-physiotherapy",
+          },
           description:
             "A complete guide to Interferential Therapy (IFT) in physiotherapy — how it works, conditions it treats, benefits, safety, and where to get IFT treatment in Guntur.",
           datePublished: "2026-07-02",
