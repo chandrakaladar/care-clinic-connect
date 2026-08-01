@@ -25,7 +25,7 @@ const setMeta = (
   el.setAttribute(attr, value);
 };
 
-const SITE_URL = "https://carewell-clinic-web.lovable.app";
+const SITE_URL = "https://wecarephysioclinic.com";
 
 const SEOHead = ({ title, description, canonical, ogType = "website", jsonLd }: SEOHeadProps) => {
   useEffect(() => {
