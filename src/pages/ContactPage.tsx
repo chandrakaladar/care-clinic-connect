@@ -31,9 +31,25 @@ const ContactPage = () => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
+  const buildWhatsAppUrl = (data: typeof formData) => {
+    const text =
+      `Hello, I would like to book an appointment at We Care Physiotherapy Clinic.\n\n` +
+      `👤 Name: ${data.name || "(not provided)"}\n` +
+      `📞 Phone: ${data.phone || "(not provided)"}\n` +
+      `📧 Email: ${data.email || "(not provided)"}\n` +
+      `🩺 Concern: ${data.concern || "(not provided)"}\n` +
+      `📝 Message: ${data.message || "(not provided)"}\n\n` +
+      `Please confirm my appointment. Thank you!`;
+    return `https://wa.me/917330833964?text=${encodeURIComponent(text)}`;
+  };
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+
+    // Open the WhatsApp tab synchronously (inside the click/submit gesture) so
+    // browsers don't block it as a popup after the async DB call.
+    const waWindow = window.open("", "_blank");
 
     try {
       const { error } = await supabase.from("appointment_requests").insert({
@@ -48,15 +64,20 @@ const ContactPage = () => {
 
       if (error) {
         console.error("Supabase insert error:", error);
-        toast.error("Failed to submit. Please try again or call us directly.");
-        setLoading(false);
-        return;
+      }
+
+      const url = buildWhatsAppUrl(formData);
+      if (waWindow) {
+        waWindow.location.href = url;
+      } else {
+        window.location.href = url;
       }
 
       setSubmitted(true);
-      toast.success("Appointment request received! We'll contact you shortly to confirm.");
+      toast.success("Opening WhatsApp — press send to deliver your request to the clinic.");
     } catch (err) {
       console.error("Submit error:", err);
+      waWindow?.close();
       toast.error("Something went wrong. Please call us at 073308 33964.");
     } finally {
       setLoading(false);
@@ -64,8 +85,7 @@ const ContactPage = () => {
   };
 
   const bookViaWhatsApp = () => {
-    const text = `Hello, I would like to book an appointment at We Care Physiotherapy Clinic.%0A%0A👤 Name: ${formData.name || "(not provided)"}%0A📞 Phone: ${formData.phone || "(not provided)"}%0A📧 Email: ${formData.email || "(not provided)"}%0A🩺 Concern: ${formData.concern || "(not provided)"}%0A📝 Message: ${formData.message || "(not provided)"}%0A%0APlease confirm my appointment. Thank you!`;
-    window.open(`https://wa.me/917330833964?text=${text}`, "_blank");
+    window.open(buildWhatsAppUrl(formData), "_blank");
   };
 
   return (
