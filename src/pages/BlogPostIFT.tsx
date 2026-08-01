@@ -41,7 +41,7 @@ const BlogPostIFT = () => (
           headline: "What is IFT Physiotherapy? Benefits, Uses & How It Works",
           mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://carewell-clinic-web.lovable.app/blog/what-is-ift-physiotherapy",
+            "@id": "https://wecarephysioclinic.com/blog/what-is-ift-physiotherapy",
           },
           description:
             "A complete guide to Interferential Therapy (IFT) in physiotherapy — how it works, conditions it treats, benefits, safety, and where to get IFT treatment in Guntur.",
@@ -79,9 +79,9 @@ const BlogPostIFT = () => (
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://carewell-clinic-web.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Blog", item: "https://carewell-clinic-web.lovable.app/blog" },
-            { "@type": "ListItem", position: 3, name: "What is IFT Physiotherapy", item: "https://carewell-clinic-web.lovable.app/blog/what-is-ift-physiotherapy" },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://wecarephysioclinic.com/" },
+            { "@type": "ListItem", position: 2, name: "Blog", item: "https://wecarephysioclinic.com/blog" },
+            { "@type": "ListItem", position: 3, name: "What is IFT Physiotherapy", item: "https://wecarephysioclinic.com/blog/what-is-ift-physiotherapy" },
           ],
         },
       ]}

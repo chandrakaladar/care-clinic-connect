@@ -79,7 +79,7 @@ const ContactPage = () => {
             "@context": "https://schema.org",
             "@type": "Physiotherapy",
             name: "We Care Physiotherapy & Sports & Chiropractic Clinic",
-            image: "https://carewell-clinic-web.lovable.app/images/clinic-hero.jpg",
+            image: "https://wecarephysioclinic.com/images/clinic-hero.jpg",
             address: {
               "@type": "PostalAddress",
               streetAddress: "Door No: 13, 5-18, 4th Lane, near Kamaraju Diagnostic Centre, Gunturvari Thota",
@@ -95,7 +95,7 @@ const ContactPage = () => {
             },
             telephone: "+917330833964",
             openingHours: "Mo-Su 00:00-23:00",
-            url: "https://carewell-clinic-web.lovable.app/contact",
+            url: "https://wecarephysioclinic.com/contact",
             areaServed: {
               "@type": "City",
               name: "Guntur",
