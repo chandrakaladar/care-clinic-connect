@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://carewell-clinic-web.lovable.app/sitemap.xml
+Sitemap: https://wecarephysioclinic.com/sitemap.xml
