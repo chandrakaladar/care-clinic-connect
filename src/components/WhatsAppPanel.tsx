@@ -14,8 +14,13 @@ const WhatsAppPanel = ({ phone = "917330833964" }: WhatsAppPanelProps) => {
   const [submitted, setSubmitted] = useState(false);
 
   const sendToWhatsApp = () => {
-    const text = `Hello, I would like to book an appointment at We Care Physiotherapy Clinic.%0A%0A👤 Name: ${name || "(not provided)"}%0A📞 Phone: ${phoneNum || "(not provided)"}%0A🩺 Concern: ${concern || "(not provided)"}%0A%0APlease confirm my appointment. Thank you!`;
-    window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+    const text =
+      `Hello, I would like to book an appointment at We Care Physiotherapy Clinic.\n\n` +
+      `👤 Name: ${name || "(not provided)"}\n` +
+      `📞 Phone: ${phoneNum || "(not provided)"}\n` +
+      `🩺 Concern: ${concern || "(not provided)"}\n\n` +
+      `Please confirm my appointment. Thank you!`;
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, "_blank");
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
