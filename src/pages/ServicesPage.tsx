@@ -117,6 +117,13 @@ const ServicesPage = () => (
           <p className="text-muted-foreground">
             Dedicated care pages for patients searching from their locality — Kothapeta, Brodipet, Arundelpet and Lakshmipuram.
           </p>
+          <p className="text-muted-foreground mt-3">
+            Can't travel to the clinic?{" "}
+            <Link to="/services/home-visit-physiotherapy" className="text-primary font-medium hover:underline">
+              Book home visit physiotherapy in Guntur
+            </Link>
+            .
+          </p>
         </ScrollReveal>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
