@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://wecarephysioclinic.com/sitemap.xml
+Sitemap: https://wecarephysiocliniccom.lovable.app/sitemap.xml
