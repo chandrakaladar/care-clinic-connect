@@ -65,6 +65,7 @@ const ServicesPage = () => (
                     </div>
                     <Link
                       to="/contact"
+                      aria-label={`Book appointment for ${svc.title}`}
                       className="shrink-0 w-9 h-9 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                     >
                       <ArrowRight className="w-4 h-4" />

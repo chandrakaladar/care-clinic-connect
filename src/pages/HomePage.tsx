@@ -58,8 +58,8 @@ const HomePage = () => (
             Physiotherapy & Rehabilitation Centre in Guntur
           </motion.p>
           <h1 className="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.08] mb-6">
-            Your Recovery,<br />
-            <span className="text-gradient">Our Commitment</span>
+            Physiotherapy & Rehabilitation Clinic in Guntur<br />
+            <span className="text-gradient">Your Recovery, Our Commitment</span>
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-lg mb-4 leading-relaxed">
             Advanced Chiropractic & Osteopathy, Dry Needling, Myofascial Release, Cupping Therapy, and Paralysis Treatment — all following international rehab protocols.
