@@ -35,6 +35,10 @@ const App = () => (
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/what-is-ift-physiotherapy" element={<BlogPostIFT />} />
+            <Route path="/blog/best-exercises-for-back-pain" element={<BlogPostBackPain />} />
+            <Route path="/blog/how-physiotherapy-helps-knee-pain" element={<BlogPostKneePain />} />
+            <Route path="/blog/post-surgery-rehabilitation-tips" element={<BlogPostSurgery />} />
+            <Route path="/blog/when-should-you-see-a-physiotherapist" element={<BlogPostWhenToSee />} />
             <Route path="/physiotherapy/:slug" element={<LocationServicePage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<NotFound />} />
