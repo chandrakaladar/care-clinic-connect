@@ -13,6 +13,10 @@ import TeamPage from "@/pages/TeamPage";
 import TestimonialsPage from "@/pages/TestimonialsPage";
 import BlogPage from "@/pages/BlogPage";
 import BlogPostIFT from "@/pages/BlogPostIFT";
+import BlogPostBackPain from "@/pages/BlogPostBackPain";
+import BlogPostKneePain from "@/pages/BlogPostKneePain";
+import BlogPostSurgery from "@/pages/BlogPostSurgery";
+import BlogPostWhenToSee from "@/pages/BlogPostWhenToSee";
 import ContactPage from "@/pages/ContactPage";
 import LocationServicePage from "@/pages/LocationServicePage";
 import NotFound from "@/pages/NotFound";
@@ -35,6 +39,10 @@ const App = () => (
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/what-is-ift-physiotherapy" element={<BlogPostIFT />} />
+            <Route path="/blog/best-exercises-for-back-pain" element={<BlogPostBackPain />} />
+            <Route path="/blog/how-physiotherapy-helps-knee-pain" element={<BlogPostKneePain />} />
+            <Route path="/blog/post-surgery-rehabilitation-tips" element={<BlogPostSurgery />} />
+            <Route path="/blog/when-should-you-see-a-physiotherapist" element={<BlogPostWhenToSee />} />
             <Route path="/physiotherapy/:slug" element={<LocationServicePage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<NotFound />} />
