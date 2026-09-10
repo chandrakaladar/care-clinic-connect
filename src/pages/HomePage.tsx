@@ -57,6 +57,9 @@ const HomePage = () => (
           >
             Physiotherapy & Rehabilitation Centre in Guntur
           </motion.p>
+          <p className="text-sm text-primary font-medium mb-4">
+            <Link to="/physio-in-guntur" className="hover:underline">Physio in Guntur</Link> — trusted care since 12+ years
+          </p>
           <h1 className="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.08] mb-6">
             Physiotherapy & Rehabilitation Clinic in Guntur<br />
             <span className="text-gradient">Your Recovery, Our Commitment</span>
