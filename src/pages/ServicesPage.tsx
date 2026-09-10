@@ -44,6 +44,13 @@ const ServicesPage = () => (
           <p className="inline-block bg-primary/10 text-primary font-semibold text-sm px-4 py-2 rounded-full">
             ✦ We Follow International Rehab Protocols
           </p>
+          <p className="text-muted-foreground mt-4">
+            Looking for a trusted{" "}
+            <Link to="/physio-in-guntur" className="text-primary font-medium hover:underline">
+              physio in Guntur
+            </Link>
+            ? We Care Physiotherapy offers 15+ treatments across the city.
+          </p>
         </ScrollReveal>
 
         {/* Services Grid — cbphysiotherapy.in style */}
