@@ -18,6 +18,7 @@ import BlogPostKneePain from "@/pages/BlogPostKneePain";
 import BlogPostSurgery from "@/pages/BlogPostSurgery";
 import BlogPostWhenToSee from "@/pages/BlogPostWhenToSee";
 import ContactPage from "@/pages/ContactPage";
+import PhysioInGunturPage from "@/pages/PhysioInGunturPage";
 import LocationServicePage from "@/pages/LocationServicePage";
 import NotFound from "@/pages/NotFound";
 
@@ -43,6 +44,7 @@ const App = () => (
             <Route path="/blog/how-physiotherapy-helps-knee-pain" element={<BlogPostKneePain />} />
             <Route path="/blog/post-surgery-rehabilitation-tips" element={<BlogPostSurgery />} />
             <Route path="/blog/when-should-you-see-a-physiotherapist" element={<BlogPostWhenToSee />} />
+            <Route path="/physio-in-guntur" element={<PhysioInGunturPage />} />
             <Route path="/physiotherapy/:slug" element={<LocationServicePage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<NotFound />} />
