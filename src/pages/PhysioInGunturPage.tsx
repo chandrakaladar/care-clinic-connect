@@ -66,8 +66,8 @@ const PhysioInGunturPage = () => {
       },
       areaServed: areasList.map((a) => ({ "@type": "Place", name: `${a}, Guntur` })),
       medicalSpecialty: "Physiotherapy",
-      openingHours: "Mo-Su 00:00-23:00",
-      url: "https://wecarephysiocliniccom.lovable.app/physio-in-guntur",
+      openingHours: "Mo-Su 08:00-23:00",
+      url: "https://wecarephysioclinic.com/physio-in-guntur",
     },
     {
       "@context": "https://schema.org",

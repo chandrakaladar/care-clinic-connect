@@ -136,6 +136,30 @@ export const services: ServiceDef[] = [
     ],
     sessions: "Neuro rehab is a long-term journey; we plan in 4-week blocks with monthly outcome reviews.",
   },
+  {
+    slug: "chiropractic-and-osteopathy",
+    name: "Chiropractic & Osteopathy",
+    shortName: "chiropractic",
+    intro:
+      "Spinal misalignment, joint restriction and postural imbalance need precise hands-on correction — not just painkillers. Our Guntur chiropractors use advanced chiropractic adjustments and osteopathic techniques following international protocols to restore alignment, relieve nerve pressure and improve whole-body movement.",
+    conditions: [
+      "Spinal misalignment & vertebral subluxation",
+      "Chronic lower back & neck pain",
+      "Slipped disc & sciatica",
+      "Postural problems & forward-head posture",
+      "Joint stiffness & restricted movement",
+      "Headaches originating from the spine",
+    ],
+    treatments: [
+      "Chiropractic spinal adjustments",
+      "Osteopathic joint mobilisation",
+      "Biomechanical correction of the spine",
+      "Myofascial release therapy",
+      "Postural assessment & correction",
+      "Supportive physiotherapy & exercise rehab",
+    ],
+    sessions: "Many patients feel noticeable relief within 3–5 adjustments; a full corrective course typically runs 8–12 sessions.",
+  },
 ];
 
 export const areas: AreaDef[] = [
