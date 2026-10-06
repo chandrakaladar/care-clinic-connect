@@ -19,6 +19,7 @@ import BlogPostSurgery from "@/pages/BlogPostSurgery";
 import BlogPostWhenToSee from "@/pages/BlogPostWhenToSee";
 import ContactPage from "@/pages/ContactPage";
 import PhysioInGunturPage from "@/pages/PhysioInGunturPage";
+import ChiropractorGunturPage from "@/pages/ChiropractorGunturPage";
 import LocationServicePage from "@/pages/LocationServicePage";
 import NotFound from "@/pages/NotFound";
 
@@ -45,6 +46,7 @@ const App = () => (
             <Route path="/blog/post-surgery-rehabilitation-tips" element={<BlogPostSurgery />} />
             <Route path="/blog/when-should-you-see-a-physiotherapist" element={<BlogPostWhenToSee />} />
             <Route path="/physio-in-guntur" element={<PhysioInGunturPage />} />
+            <Route path="/chiropractor-in-guntur" element={<ChiropractorGunturPage />} />
             <Route path="/physiotherapy/:slug" element={<LocationServicePage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<NotFound />} />
