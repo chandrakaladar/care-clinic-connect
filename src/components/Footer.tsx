@@ -35,7 +35,7 @@ const Footer = () => (
           <Link to="/services" className="hover:text-secondary-foreground transition-colors">Chiropractic & Osteopathy</Link>
           <Link to="/services" className="hover:text-secondary-foreground transition-colors">Dry Needling & Acupuncture</Link>
           <Link to="/services" className="hover:text-secondary-foreground transition-colors">Myofascial Release</Link>
-          <Link to="/services" className="hover:text-secondary-foreground transition-colors">Paralysis Treatment</Link>
+          <Link to="/services/paralysis-treatment-guntur" className="hover:text-secondary-foreground transition-colors">Paralysis Treatment</Link>
           <Link to="/services" className="hover:text-secondary-foreground transition-colors">Sports Injury Rehab</Link>
           <Link to="/services" className="hover:text-secondary-foreground transition-colors">Cupping & Heat Therapy</Link>
         </nav>
