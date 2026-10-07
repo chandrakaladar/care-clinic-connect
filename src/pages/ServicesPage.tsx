@@ -49,7 +49,11 @@ const ServicesPage = () => (
             <Link to="/physio-in-guntur" className="text-primary font-medium hover:underline">
               physio in Guntur
             </Link>
-            ? We Care Physiotherapy offers 15+ treatments across the city.
+            ? We Care Physiotherapy offers 15+ treatments across the city, including specialised{" "}
+            <Link to="/services/paralysis-treatment-guntur" className="text-primary font-medium hover:underline">
+              paralysis treatment in Guntur
+            </Link>
+            .
           </p>
         </ScrollReveal>
 
