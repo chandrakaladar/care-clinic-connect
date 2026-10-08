@@ -7,6 +7,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead from "@/components/SEOHead";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+import { trackAppointmentSubmit, trackWhatsAppClick } from "@/lib/analytics";
 
 const faqs = [
   { q: "Do I need a doctor's referral for physiotherapy?", a: "No, you can directly visit We Care Physiotherapy Clinic in Guntur without a referral. However, if you're recovering from surgery, bringing your medical reports helps us create a better treatment plan." },
@@ -74,6 +75,7 @@ const ContactPage = () => {
       }
 
       setSubmitted(true);
+      trackAppointmentSubmit("website_contact_form", formData.concern);
       toast.success("Opening WhatsApp — press send to deliver your request to the clinic.");
     } catch (err) {
       console.error("Submit error:", err);
@@ -85,6 +87,7 @@ const ContactPage = () => {
   };
 
   const bookViaWhatsApp = () => {
+    trackWhatsAppClick("contact_page_button");
     window.open(buildWhatsAppUrl(formData), "_blank");
   };
 
