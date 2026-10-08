@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, User, Phone, CalendarDays, ClipboardList } from "lucide-react";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 interface WhatsAppPanelProps {
   phone?: string;
@@ -20,6 +21,7 @@ const WhatsAppPanel = ({ phone = "917330833964" }: WhatsAppPanelProps) => {
       `📞 Phone: ${phoneNum || "(not provided)"}\n` +
       `🩺 Concern: ${concern || "(not provided)"}\n\n` +
       `Please confirm my appointment. Thank you!`;
+    trackWhatsAppClick("whatsapp_panel");
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, "_blank");
     setSubmitted(true);
     setTimeout(() => {
