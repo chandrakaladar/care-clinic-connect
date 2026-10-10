@@ -31,9 +31,13 @@ const SEOHead = ({ title, description, canonical, ogType = "website", jsonLd, no
       <meta property="og:url" content={absolute} />
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="We Care Physiotherapy Clinic" />
+      <meta property="og:image" content={`${SITE_URL}/og-image.jpg`} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={`${SITE_URL}/og-image.jpg`} />
       {blocks.map((b, i) => (
         <script key={i} type="application/ld+json">{JSON.stringify(b)}</script>
       ))}
