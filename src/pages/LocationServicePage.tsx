@@ -65,7 +65,7 @@ const LocationServicePage = () => {
           "@type": "ListItem",
           position: 3,
           name: `${service.name} in ${area.name}`,
-          item: canonical,
+          item: `https://wecarephysioclinic.com${canonical}`,
         },
       ],
     },
