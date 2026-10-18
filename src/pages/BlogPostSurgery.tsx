@@ -226,6 +226,17 @@ const BlogPostSurgery = () => (
           </div>
         </ScrollReveal>
       </div>
+        <ScrollReveal>
+          <div className="mt-10 bg-card rounded-2xl p-7 border border-border/50">
+            <h2 className="font-display font-bold text-xl text-foreground mb-3">Post-surgery rehabilitation in Guntur</h2>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+              The first 6–12 weeks after surgery are the most important for your long-term result. At We Care Physiotherapy in Kothapeta, Guntur, we follow international rehab protocols for knee replacement, ACL reconstruction, spine surgery, and fracture fixation — with structured milestones for range of motion, strength, and return to daily activity.
+            </p>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              If travelling is difficult in the early weeks, we also provide home-visit physiotherapy across Guntur with portable IFT and ultrasound equipment. Call 073308 33964 to plan your rehabilitation before or right after your surgery date.
+            </p>
+          </div>
+        </ScrollReveal>
     </article>
   </>
 );

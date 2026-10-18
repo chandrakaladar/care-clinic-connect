@@ -219,6 +219,17 @@ const BlogPostKneePain = () => (
           </div>
         </ScrollReveal>
       </div>
+        <ScrollReveal>
+          <div className="mt-10 bg-card rounded-2xl p-7 border border-border/50">
+            <h2 className="font-display font-bold text-xl text-foreground mb-3">Knee pain care in Guntur</h2>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+              Knee problems respond best when treatment matches the cause — osteoarthritis, ligament injury, meniscus damage, and post-surgical stiffness all need different approaches. At We Care Physiotherapy in Kothapeta, Guntur, your first visit includes a movement and strength assessment, after which your physiotherapist sets realistic weekly goals with you.
+            </p>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Our doctors are certified in joint replacement and pain management rehabilitation, and post-operative knee replacement rehab is one of our core specialties. Open daily until 11 PM — call 073308 33964 to book your knee assessment.
+            </p>
+          </div>
+        </ScrollReveal>
     </article>
   </>
 );

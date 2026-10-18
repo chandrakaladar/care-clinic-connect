@@ -318,6 +318,17 @@ const BlogPostIFT = () => (
           </div>
         </ScrollReveal>
       </div>
+        <ScrollReveal>
+          <div className="mt-10 bg-card rounded-2xl p-7 border border-border/50">
+            <h2 className="font-display font-bold text-xl text-foreground mb-3">Getting IFT treatment in Guntur</h2>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+              At We Care Physiotherapy in Kothapeta, Guntur, IFT is never used as a stand-alone treatment. Your session begins with a one-on-one assessment by our chief physiotherapists, after which IFT is combined with manual therapy, dry needling, or a supervised exercise program depending on your diagnosis.
+            </p>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              A typical IFT session lasts 15–20 minutes, and most treatment plans run 6–12 sessions. The clinic is open daily until 11 PM, so working professionals can attend after office hours. Call 073308 33964 to check same-day availability.
+            </p>
+          </div>
+        </ScrollReveal>
     </article>
   </>
 );

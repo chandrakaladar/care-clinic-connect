@@ -52,6 +52,18 @@ const TestimonialsPage = () => (
           ))}
         </div>
 
+        <ScrollReveal delay={0.15} className="max-w-3xl mx-auto mt-14">
+          <div className="bg-card rounded-2xl p-7 border border-border/50">
+            <h2 className="font-display font-bold text-xl text-foreground mb-3">About these stories</h2>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+              These accounts come from patients treated at our Kothapeta, Guntur clinic for conditions including chronic back pain, post-knee-replacement recovery, ACL and sports injuries, stroke rehabilitation, frozen shoulder, and sciatica. Names are shortened to protect patient privacy.
+            </p>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Recovery timelines vary from person to person depending on the condition, its severity, and consistency with the prescribed program. Your physiotherapist will give you a realistic expectation after your first assessment.
+            </p>
+          </div>
+        </ScrollReveal>
+
         <ScrollReveal delay={0.2} className="text-center mt-16">
           <Link to="/contact">
             <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground gap-2 active:scale-[0.97] transition-all duration-200 shadow-lg shadow-secondary/20">

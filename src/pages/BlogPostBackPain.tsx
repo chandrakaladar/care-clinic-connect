@@ -230,6 +230,17 @@ const BlogPostBackPain = () => (
           </div>
         </ScrollReveal>
       </div>
+        <ScrollReveal>
+          <div className="mt-10 bg-card rounded-2xl p-7 border border-border/50">
+            <h2 className="font-display font-bold text-xl text-foreground mb-3">Back pain treatment at our Guntur clinic</h2>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+              If your back pain has lasted more than two weeks, is spreading down your leg, or is disturbing your sleep, it is time for a professional assessment. At We Care Physiotherapy in Kothapeta, Guntur, our chief physiotherapists first identify whether your pain is muscular, disc-related, or postural — then build a plan that may include manual therapy, dry needling, IFT, and a graded exercise program like the one above.
+            </p>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              We see patients from Kothapeta, Brodipet, Arundelpet, Lakshmipuram and across Guntur. The clinic is open daily until 11 PM. Call 073308 33964 or WhatsApp us to book an assessment — no doctor's referral is needed.
+            </p>
+          </div>
+        </ScrollReveal>
     </article>
   </>
 );
