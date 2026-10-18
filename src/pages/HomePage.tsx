@@ -128,6 +128,24 @@ const HomePage = () => (
       </div>
     </section>
 
+    {/* Visit info strip */}
+    <section className="border-b border-border/50 bg-card">
+      <div className="container py-8 grid sm:grid-cols-3 gap-6 text-center sm:text-left">
+        <ScrollReveal>
+          <p className="text-primary font-semibold text-xs tracking-wide uppercase mb-1">Visit Us</p>
+          <p className="text-foreground text-sm font-medium">Door No 13, 5-18, 4th Lane, near Kamaraju Diagnostic Centre, Gunturvari Thota, Kothapeta, Guntur 522001</p>
+        </ScrollReveal>
+        <ScrollReveal delay={0.08}>
+          <p className="text-primary font-semibold text-xs tracking-wide uppercase mb-1">Open Daily</p>
+          <p className="text-foreground text-sm font-medium">Open every day, closes 11 PM — flexible timings for working professionals</p>
+        </ScrollReveal>
+        <ScrollReveal delay={0.16}>
+          <p className="text-primary font-semibold text-xs tracking-wide uppercase mb-1">Book a Visit</p>
+          <p className="text-foreground text-sm font-medium">Call <a href="tel:+917330833964" className="text-primary hover:underline">073308 33964</a> or <Link to="/contact" className="text-primary hover:underline">book an appointment online</Link></p>
+        </ScrollReveal>
+      </div>
+    </section>
+
     {/* Stats */}
     <section className="bg-primary text-primary-foreground relative overflow-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(174_84%_28%)_0%,hsl(160_90%_14%)_100%)]" />

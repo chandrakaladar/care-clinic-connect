@@ -131,6 +131,24 @@ const TeamPage = () => (
           ))}
         </div>
 
+        {/* Credentials & approach */}
+        <ScrollReveal delay={0.15} className="mt-16 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-card rounded-2xl p-6 border border-border/50">
+              <h3 className="font-display font-bold text-lg text-foreground mb-2">Qualifications</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">Both doctors hold MPT (Sports) — a Master's in Physiotherapy specialising in sports — along with MIAP membership of the Indian Association of Physiotherapists and CDNT certification in dry needling.</p>
+            </div>
+            <div className="bg-card rounded-2xl p-6 border border-border/50">
+              <h3 className="font-display font-bold text-lg text-foreground mb-2">Clinical Experience</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">12+ years of practice and 8,500+ patients treated across Guntur — covering sports injuries, post-surgical rehabilitation, stroke and paralysis recovery, and chronic pain management.</p>
+            </div>
+            <div className="bg-card rounded-2xl p-6 border border-border/50">
+              <h3 className="font-display font-bold text-lg text-foreground mb-2">Treatment Approach</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">Every patient receives a one-on-one assessment and a personalised plan following international rehab protocols — combining manual therapy, dry needling, IFT, and supervised exercise programs.</p>
+            </div>
+          </div>
+        </ScrollReveal>
+
         {/* Contact strip */}
         <ScrollReveal delay={0.2} className="mt-16">
           <div className="max-w-5xl mx-auto bg-gradient-to-r from-primary/5 to-primary/[0.02] rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 border border-primary/10">
