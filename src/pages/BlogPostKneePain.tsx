@@ -230,7 +230,6 @@ const BlogPostKneePain = () => (
             </p>
           </div>
         </ScrollReveal>
-      </div>
     </article>
   </>
 );

@@ -329,7 +329,6 @@ const BlogPostIFT = () => (
             </p>
           </div>
         </ScrollReveal>
-      </div>
     </article>
   </>
 );

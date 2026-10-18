@@ -241,7 +241,6 @@ const BlogPostBackPain = () => (
             </p>
           </div>
         </ScrollReveal>
-      </div>
     </article>
   </>
 );
