@@ -215,6 +215,18 @@ const BlogPostWhenToSee = () => (
           </div>
         </ScrollReveal>
       </div>
+        <ScrollReveal>
+          <div className="mt-10 bg-card rounded-2xl p-7 border border-border/50">
+            <h2 className="font-display font-bold text-xl text-foreground mb-3">Seeing a physiotherapist in Guntur</h2>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+              You do not need a doctor's referral to see a physiotherapist in India. At We Care Physiotherapy in Kothapeta, Guntur, your first visit is a one-on-one assessment with our chief physiotherapists — they will explain what is causing your problem, whether physiotherapy can help, and how many sessions you are likely to need.
+            </p>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              The clinic is centrally located near Kamaraju Diagnostic Centre, Gunturvari Thota, and is open daily until 11 PM. Same-day appointments are usually available — call 073308 33964 or send us a WhatsApp message to book.
+            </p>
+          </div>
+        </ScrollReveal>
+      </div>
     </article>
   </>
 );
