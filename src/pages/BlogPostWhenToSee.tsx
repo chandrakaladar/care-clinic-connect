@@ -226,7 +226,6 @@ const BlogPostWhenToSee = () => (
             </p>
           </div>
         </ScrollReveal>
-      </div>
     </article>
   </>
 );
