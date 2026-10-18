@@ -237,7 +237,6 @@ const BlogPostSurgery = () => (
             </p>
           </div>
         </ScrollReveal>
-      </div>
     </article>
   </>
 );
