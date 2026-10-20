@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
-import SEOHead from "@/components/SEOHead";
+import SEOHead, { SITE_URL } from "@/components/SEOHead";
 
 const posts = [
   {
@@ -9,6 +9,7 @@ const posts = [
     title: "What is IFT Physiotherapy? Benefits, Uses & How It Works",
     excerpt: "IFT (Interferential Therapy) is one of the most effective non-invasive treatments for back pain, knee pain and sports injuries. Learn how our Guntur physiotherapists use it to speed up your recovery.",
     date: "July 2, 2026",
+    datePublished: "2026-07-02",
     category: "Electrotherapy",
     readTime: "8 min read",
   },
@@ -17,6 +18,7 @@ const posts = [
     title: "Best Exercises for Back Pain Relief",
     excerpt: "Suffering from lower back pain? Discover the top physiotherapist-recommended exercises you can do at home to strengthen your back and reduce pain naturally.",
     date: "March 15, 2026",
+    datePublished: "2026-03-15",
     category: "Pain Relief",
     readTime: "5 min read",
   },
@@ -25,6 +27,7 @@ const posts = [
     title: "How Physiotherapy Helps Knee Pain",
     excerpt: "Knee pain doesn't always require surgery. Learn how physiotherapy techniques like manual therapy, strengthening exercises, and electrotherapy can restore your knee health.",
     date: "March 8, 2026",
+    datePublished: "2026-03-08",
     category: "Knee Health",
     readTime: "4 min read",
   },
@@ -33,6 +36,7 @@ const posts = [
     title: "Post-Surgery Rehabilitation: Essential Tips for a Faster Recovery",
     excerpt: "Had a knee replacement or spinal surgery? Here are evidence-based rehabilitation tips from our Guntur physiotherapy experts to speed up your recovery safely.",
     date: "February 28, 2026",
+    datePublished: "2026-02-28",
     category: "Recovery",
     readTime: "6 min read",
   },
@@ -41,6 +45,7 @@ const posts = [
     title: "When Should You See a Physiotherapist?",
     excerpt: "Many people delay physiotherapy until pain becomes unbearable. Learn the early warning signs that indicate it's time to visit a physiotherapist in Guntur.",
     date: "February 20, 2026",
+    datePublished: "2026-02-20",
     category: "Wellness",
     readTime: "4 min read",
   },
@@ -55,6 +60,7 @@ const BlogPage = () => (
       jsonLd={{
         "@context": "https://schema.org",
         "@type": "Blog",
+        url: `${SITE_URL}/blog`,
         name: "We Care Physiotherapy Blog",
         description:
           "Expert physiotherapy articles, pain relief tips and recovery guides from We Care Physiotherapy Clinic in Guntur.",
@@ -62,8 +68,9 @@ const BlogPage = () => (
           "@type": "BlogPosting",
           headline: p.title,
           description: p.excerpt,
-          datePublished: p.date,
-          url: `/blog/${p.slug}`,
+          datePublished: p.datePublished,
+          url: `${SITE_URL}/blog/${p.slug}`,
+          mainEntityOfPage: `${SITE_URL}/blog/${p.slug}`,
           author: {
             "@type": "Organization",
             name: "We Care Physiotherapy & Chiropractic Clinic",
@@ -89,7 +96,7 @@ const BlogPage = () => (
               <article className="bg-card rounded-2xl p-8 shadow-sm border border-border/50 group hover:shadow-md transition-shadow duration-300">
                 <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
                   <span className="bg-teal-soft text-primary px-2.5 py-1 rounded-full font-medium">{post.category}</span>
-                  <span>{post.date}</span>
+                  <time dateTime={post.datePublished}>{post.date}</time>
                   <span>·</span>
                   <span>{post.readTime}</span>
                 </div>
