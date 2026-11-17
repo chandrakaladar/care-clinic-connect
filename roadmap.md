@@ -1,4 +1,5 @@
 # SEO fixes
+- [ ] Review failing SEO findings, fix actionable issues, and assess zero search traffic with Search Console.
 - [ ] Add Gemini appointment assistant with one browser-saved conversation and WhatsApp handoff.
 - [ ] Verify assistant replies, conversation restoration, and appointment handoff.
 - [ ] Check security and request publication after AI verification.

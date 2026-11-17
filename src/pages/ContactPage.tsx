@@ -8,6 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { trackAppointmentSubmit, trackWhatsAppClick } from "@/lib/analytics";
+import AppointmentAssistant from "@/components/AppointmentAssistant";
 
 const faqs = [
   { q: "Do I need a doctor's referral for physiotherapy?", a: "No, you can directly visit We Care Physiotherapy Clinic in Guntur without a referral. However, if you're recovering from surgery, bringing your medical reports helps us create a better treatment plan." },
@@ -227,6 +228,7 @@ const ContactPage = () => {
 
             {/* Form */}
             <ScrollReveal delay={0.1} className="lg:col-span-3">
+              <div className="mb-8"><AppointmentAssistant /></div>
               <div className="bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50">
                 <h2 className="font-display font-bold text-xl text-foreground mb-6">Request an Appointment</h2>
 
