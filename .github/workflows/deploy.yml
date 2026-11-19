@@ -35,18 +35,22 @@ jobs:
       - name: Build Vite app
         run: npm run build
 
+      - name: Copy index and 404
+        run: |
+          cp index.html .output/public/index.html || true
+          cp index.html .output/public/404.html || true
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './.output/public'
 
   deploy:
-    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
