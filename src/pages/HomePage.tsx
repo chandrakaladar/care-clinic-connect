@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Award, Users, Heart, Activity, Brain, Bone, Zap, Hand, Scissors, Flame, Star } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -174,7 +174,7 @@ const HomePage = () => (
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((svc, i) => (
           <ScrollReveal key={svc.title} delay={i * 0.06}>
-            <Link to="/services" className="group block bg-card rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 h-full border border-border/50 hover:-translate-y-1 relative overflow-hidden">
+            <Link to="/services" className="group block bg-card rounded-2xl p-7 shadow-xs hover:shadow-xl transition-all duration-300 h-full border border-border/50 hover:-translate-y-1 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-5">
@@ -238,7 +238,7 @@ const HomePage = () => (
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {miniTestimonials.map((t, i) => (
           <ScrollReveal key={t.name} delay={i * 0.08}>
-            <div className="bg-card rounded-2xl p-7 shadow-sm border border-border/50 h-full flex flex-col hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative">
+            <div className="bg-card rounded-2xl p-7 shadow-xs border border-border/50 h-full flex flex-col hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative">
               <span className="absolute top-4 right-5 text-5xl font-serif text-primary/10 leading-none select-none">"</span>
               <div className="flex gap-0.5 mb-3">
                 {Array.from({ length: t.rating }).map((_, j) => (

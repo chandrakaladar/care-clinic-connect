@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import SEOHead, { SITE_URL } from "@/components/SEOHead";
@@ -93,7 +93,7 @@ const BlogPage = () => (
         <div className="space-y-6">
           {posts.map((post, i) => (
             <ScrollReveal key={post.slug} delay={i * 0.06}>
-              <article className="bg-card rounded-2xl p-8 shadow-sm border border-border/50 group hover:shadow-md transition-shadow duration-300">
+              <article className="bg-card rounded-2xl p-8 shadow-xs border border-border/50 group hover:shadow-md transition-shadow duration-300">
                 <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
                   <span className="bg-teal-soft text-primary px-2.5 py-1 rounded-full font-medium">{post.category}</span>
                   <time dateTime={post.datePublished}>{post.date}</time>

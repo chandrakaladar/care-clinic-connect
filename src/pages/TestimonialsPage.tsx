@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -35,7 +35,7 @@ const TestimonialsPage = () => (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {testimonials.map((t, i) => (
             <ScrollReveal key={t.name} delay={i * 0.06}>
-              <div className="bg-card rounded-2xl p-7 shadow-sm border border-border/50 h-full flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative group">
+              <div className="bg-card rounded-2xl p-7 shadow-xs border border-border/50 h-full flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative group">
                 <span className="absolute top-4 right-5 text-6xl font-serif text-primary/8 leading-none select-none group-hover:text-primary/15 transition-colors duration-300">"</span>
                 <div className="flex gap-0.5 mb-4">
                   {Array.from({ length: t.rating }).map((_, j) => (

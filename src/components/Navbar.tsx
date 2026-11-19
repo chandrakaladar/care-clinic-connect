@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@/lib/router-compat";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -28,7 +28,7 @@ const Navbar = () => {
     <header
       className={`sticky top-0 z-50 border-b transition-all duration-300 ${
         scrolled
-          ? "bg-card/95 backdrop-blur-lg shadow-sm"
+          ? "bg-card/95 backdrop-blur-lg shadow-xs"
           : "bg-card/80 backdrop-blur-md"
       }`}
     >

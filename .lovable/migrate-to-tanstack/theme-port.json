@@ -1,0 +1,104 @@
+{
+ "customizations": [
+  {
+   "token": "--background..--sidebar-ring (teal/green palette)",
+   "source": "src/index.css",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "--hero-gradient",
+   "source": "src/index.css",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "--surface-warm",
+   "source": "src/index.css",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "--teal-soft",
+   "source": "src/index.css",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "--radius",
+   "source": "tailwind.config.ts",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "--font-display",
+   "source": "tailwind.config.ts",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "--font-body",
+   "source": "tailwind.config.ts",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "font-display",
+   "source": "src/index.css",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "font-body",
+   "source": "src/index.css",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "text-gradient",
+   "source": "src/index.css",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "bg-surface-warm",
+   "source": "src/index.css",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "bg-teal-soft",
+   "source": "src/index.css",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "container",
+   "source": "tailwind.config.ts",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "animate-float",
+   "source": "src/index.css",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "animate-float-delayed",
+   "source": "src/index.css",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "animate-pulse-ring",
+   "source": "src/index.css",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "animate-fade-in-up",
+   "source": "tailwind.config.ts",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "animate-accordion-down/up",
+   "source": "tailwind.config.ts",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "shimmer keyframes",
+   "source": "src/index.css",
+   "reappliedIn": "src/styles.css"
+  },
+  {
+   "token": "h1-h6 Outfit heading font",
+   "source": "src/index.css",
+   "reappliedIn": "src/styles.css"
+  }
+ ]
+}

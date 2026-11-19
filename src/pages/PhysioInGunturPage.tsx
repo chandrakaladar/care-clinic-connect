@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import {
   ArrowRight, Phone, MessageCircle, MapPin, Clock, CheckCircle2,
   Award, Shield, Users, Activity, Brain, Zap, Heart, Bone,
@@ -184,7 +184,7 @@ const PhysioInGunturPage = () => {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                  className="group bg-card rounded-2xl p-7 shadow-sm border border-border/50 h-full hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
+                  className="group bg-card rounded-2xl p-7 shadow-xs border border-border/50 h-full hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                   <div className="relative z-10">
@@ -249,7 +249,7 @@ const PhysioInGunturPage = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <div className="rounded-2xl overflow-hidden border border-border/60 shadow-sm h-full min-h-[280px]">
+            <div className="rounded-2xl overflow-hidden border border-border/60 shadow-xs h-full min-h-[280px]">
               <iframe
                 title="We Care Physiotherapy Guntur location map"
                 src="https://www.google.com/maps?q=Kothapeta,+Guntur,+Andhra+Pradesh+522001&output=embed"

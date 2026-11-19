@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bone, Activity, Brain, Heart, Zap, Hand, Droplets, Flame, Baby, Footprints, CircleDot, Waves, BedDouble, Scissors } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -64,7 +64,7 @@ const ServicesPage = () => (
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="group bg-card rounded-2xl p-7 shadow-sm border border-border/50 h-full flex flex-col hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
+                className="group bg-card rounded-2xl p-7 shadow-xs border border-border/50 h-full flex flex-col hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
               >
                 {/* Subtle gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />

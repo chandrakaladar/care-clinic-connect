@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Mail, Award, BookOpen, Star, CalendarCheck } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -65,7 +65,7 @@ const TeamPage = () => (
               <motion.div
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border/50 h-full flex flex-col group hover:shadow-xl transition-shadow duration-300"
+                className="bg-card rounded-2xl overflow-hidden shadow-xs border border-border/50 h-full flex flex-col group hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Image */}
                 <div className="relative overflow-hidden">

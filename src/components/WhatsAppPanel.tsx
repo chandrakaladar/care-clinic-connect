@@ -88,7 +88,7 @@ const WhatsAppPanel = ({ phone = "917330833964" }: WhatsAppPanelProps) => {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Enter your name"
-                      className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(142_70%_45%)]/30 transition-all"
+                      className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm text-foreground focus:outline-hidden focus:ring-2 focus:ring-[hsl(142_70%_45%)]/30 transition-all"
                     />
                   </div>
                   <div>
@@ -100,7 +100,7 @@ const WhatsAppPanel = ({ phone = "917330833964" }: WhatsAppPanelProps) => {
                       value={phoneNum}
                       onChange={(e) => setPhoneNum(e.target.value)}
                       placeholder="+91 XXXXX XXXXX"
-                      className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(142_70%_45%)]/30 transition-all"
+                      className="w-full h-10 rounded-lg border border-input bg-background px-3 text-sm text-foreground focus:outline-hidden focus:ring-2 focus:ring-[hsl(142_70%_45%)]/30 transition-all"
                     />
                   </div>
                   <div>
@@ -112,7 +112,7 @@ const WhatsAppPanel = ({ phone = "917330833964" }: WhatsAppPanelProps) => {
                       onChange={(e) => setConcern(e.target.value)}
                       placeholder="Briefly describe your condition..."
                       rows={3}
-                      className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-[hsl(142_70%_45%)]/30 transition-all resize-none"
+                      className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-hidden focus:ring-2 focus:ring-[hsl(142_70%_45%)]/30 transition-all resize-none"
                     />
                   </div>
                   <button

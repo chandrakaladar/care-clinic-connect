@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import {
   ArrowRight, Phone, MessageCircle, MapPin, Clock, CheckCircle2,
   Award, Shield, Users, Bone, Activity, Zap,
@@ -179,7 +179,7 @@ const ChiropractorGunturPage = () => {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                  className="group bg-card rounded-2xl p-7 shadow-sm border border-border/50 h-full hover:shadow-xl transition-shadow duration-300"
+                  className="group bg-card rounded-2xl p-7 shadow-xs border border-border/50 h-full hover:shadow-xl transition-shadow duration-300"
                 >
                   <div className="w-14 h-14 rounded-2xl bg-teal-soft flex items-center justify-center mb-5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                     <t.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
@@ -231,7 +231,7 @@ const ChiropractorGunturPage = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <div className="rounded-2xl overflow-hidden border border-border/60 shadow-sm h-full min-h-[280px]">
+            <div className="rounded-2xl overflow-hidden border border-border/60 shadow-xs h-full min-h-[280px]">
               <iframe
                 title="We Care Physiotherapy Guntur location map"
                 src="https://www.google.com/maps?q=Kothapeta,+Guntur,+Andhra+Pradesh+522001&output=embed"

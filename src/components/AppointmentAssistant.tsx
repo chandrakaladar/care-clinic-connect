@@ -39,7 +39,7 @@ export default function AppointmentAssistant() {
     textarea.current?.focus();
   }
   return (
-    <section aria-label="Clinic appointment assistant" className="overflow-hidden rounded-lg border border-border bg-card shadow-sm">
+    <section aria-label="Clinic appointment assistant" className="overflow-hidden rounded-lg border border-border bg-card shadow-xs">
       <div className="flex items-center justify-between gap-3 border-b border-border px-5 py-4">
         <div className="flex min-w-0 items-center gap-3">
           <img src="/favicon.ico" alt="We Care" className="h-10 w-10 rounded-md object-contain" />

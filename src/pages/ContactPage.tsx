@@ -151,7 +151,7 @@ const ContactPage = () => {
           <div className="grid lg:grid-cols-5 gap-10 max-w-6xl mx-auto">
             {/* Contact Info */}
             <ScrollReveal className="lg:col-span-2 space-y-6">
-              <div className="bg-card rounded-2xl p-7 shadow-sm border border-border/50 space-y-6">
+              <div className="bg-card rounded-2xl p-7 shadow-xs border border-border/50 space-y-6">
                 <h2 className="font-display font-bold text-xl text-foreground">Get in Touch</h2>
                 {[
                   { icon: Phone, label: "073308 33964", href: "tel:+917330833964" },
@@ -198,7 +198,7 @@ const ContactPage = () => {
               </div>
 
               {/* Map */}
-              <div className="rounded-2xl overflow-hidden shadow-sm border border-border/50 bg-card">
+              <div className="rounded-2xl overflow-hidden shadow-xs border border-border/50 bg-card">
                 <div className="h-72 md:h-80">
                   <iframe
                     title="We Care Physiotherapy Clinic Location in Kothapeta, Guntur"
@@ -229,7 +229,7 @@ const ContactPage = () => {
             {/* Form */}
             <ScrollReveal delay={0.1} className="lg:col-span-3">
               <div className="mb-8"><AppointmentAssistant /></div>
-              <div className="bg-card rounded-2xl p-8 md:p-10 shadow-sm border border-border/50">
+              <div className="bg-card rounded-2xl p-8 md:p-10 shadow-xs border border-border/50">
                 <h2 className="font-display font-bold text-xl text-foreground mb-6">Request an Appointment</h2>
 
                 {submitted ? (
@@ -298,7 +298,7 @@ const ContactPage = () => {
                         required
                         value={formData.concern}
                         onChange={(e) => handleChange("concern", e.target.value)}
-                        className="w-full h-12 rounded-lg border border-input bg-background px-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                        className="w-full h-12 rounded-lg border border-input bg-background px-3 text-sm text-foreground focus:outline-hidden focus:ring-2 focus:ring-ring"
                       >
                         <option value="">Select your concern</option>
                         <option>Back Pain / Neck Pain</option>
