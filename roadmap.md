@@ -1,4 +1,5 @@
 # SEO fixes
+- [ ] Inspect the uploaded Google search appearance screenshot and address the requested display issue after the foundation upgrade.
 - [ ] Build 24/7 WhatsApp lead assistant (no prices; calendar-based slots) — blocked on site-foundation upgrade and calendar connection.
 - [ ] Review failing SEO findings, fix actionable issues, and assess zero search traffic with Search Console.
 - [ ] Add Gemini appointment assistant with one browser-saved conversation and WhatsApp handoff.
