@@ -9,7 +9,6 @@ import {
   useLocation,
   useRouter,
 } from "@tanstack/react-router";
-import { HelmetProvider } from "react-helmet-async";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/Navbar";
@@ -20,15 +19,14 @@ import { initAnalytics, initGlobalClickTracking, trackPageView } from "@/lib/ana
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 import appCss from "../styles.css?url";
 
-const description =
-  "Physiotherapy, sports injury rehabilitation and chiropractic care at We Care Clinic in Kothapeta, Guntur. Call 073308 33964 to book an appointment.";
 const title = "We Care Physiotherapy & Chiropractic Clinic | Guntur";
+const SITE_ORIGIN = "https://wecarephysiocliniccom.lovable.app";
 
 const clinicSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
   name: "We Care Physiotherapy & Sports & Chiropractic Clinic",
-  url: "https://wecarephysioclinic.com",
+  url: SITE_ORIGIN,
   telephone: "+917330833964",
   description:
     "Advanced Chiropractic & Osteopathy, Dry Needling, Myofascial Release, Cupping Therapy, Paralysis Treatment and Rehabilitation Centre following International Rehab Protocols.",
@@ -58,8 +56,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "google-site-verification", content: "W0yrWiY-1VVtqw88mVtfg0HBzz_POR7JYXqr0QOQ35s" },
-      { title },
-      { name: "description", content: description },
       {
         name: "keywords",
         content:
@@ -68,14 +64,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "We Care Physiotherapy Clinic" },
       { property: "og:locale", content: "en_IN" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:url", content: "https://wecarephysioclinic.com/" },
-      { property: "og:image", content: "https://wecarephysioclinic.com/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: title },
-      { name: "twitter:description", content: description },
-      { name: "twitter:image", content: "https://wecarephysioclinic.com/og-image.jpg" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -125,8 +114,7 @@ function RootComponent() {
     initGlobalClickTracking();
   }, []);
   return (
-    <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Sonner />
           <PageViewTracker />
@@ -138,7 +126,6 @@ function RootComponent() {
           <WhatsAppPanel />
         </TooltipProvider>
       </QueryClientProvider>
-    </HelmetProvider>
   );
 }
 
