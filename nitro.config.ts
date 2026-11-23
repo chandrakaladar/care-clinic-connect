@@ -1,11 +1,18 @@
 import { defineConfig } from "nitro";
 
 const applicationRoutes = [
-  "^/$",
-  "^/(about|contact|team|testimonials|physio-in-guntur|chiropractor-in-guntur)/?$",
-  "^/(blog|services)/?$",
-  "^/(blog|services)/.+$",
-  "^/physiotherapy/.+$",
+  "/",
+  "/about",
+  "/contact",
+  "/team",
+  "/testimonials",
+  "/physio-in-guntur",
+  "/chiropractor-in-guntur",
+  "/blog",
+  "/blog/(.*)",
+  "/services",
+  "/services/(.*)",
+  "/physiotherapy/(.*)",
 ];
 
 export default defineConfig({
